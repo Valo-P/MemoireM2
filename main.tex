@@ -2,17 +2,23 @@
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage[skip=6pt]{parskip}
 \usepackage{geometry}
 \usepackage{footnote}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{bookmark}
 \usepackage{setspace}
 \usepackage{fancyhdr}
+\usepackage{titlesec} % Pour définir les tailles des titres
+\usepackage{mathptmx} % Utiliser Times New Roman
+\usepackage{ragged2e} % Pour justifier le texte
+\usepackage{setspace}  % Pour gérer l'interligne
 \geometry{top=3cm, bottom=3cm, left=3cm, right=3cm}
-\onehalfspacing
+\hypersetup{hidelinks}
 \pagestyle{fancy}
 \fancyhf{}
-\rfoot{\thepage}
+\cfoot{\thepage} % Centrer la numérotation de page en bas de page
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -22,27 +28,64 @@
     pdfpagemode=FullScreen,
 }
 
-\title{\textbf{Synthèse Automatisée des Réunions en Ligne : \newline Analyse des Technologies NLP, Transcription et Synthèse Vocale}}
-\author{Votre Nom \newline Encadrant: Nom de l'encadrant \newline \textbf{École / Université}} 
-\date{Année universitaire}
+% Définir les tailles des titres
+\titleformat{\chapter}[hang]{\normalfont\fontsize{14}{16}\selectfont}{\thechapter.}{1em}{\fontsize{14}{16}\selectfont} % 14 pt pour les gros titres
+\titleformat{\section}[hang]{\normalfont\fontsize{13}{15}\selectfont}{\thesection.}{1em}{\fontsize{13}{15}\selectfont} % 13 pt pour les sous-titres
+
+% Définir la taille du texte
+\renewcommand{\normalsize}{\fontsize{11}{13}\selectfont} % 11 pt pour le texte
+
+% Définir la taille des notes de bas de page
+\renewcommand{\footnotesize}{\fontsize{10}{12}\selectfont} % 10 pt pour les notes
+
+% Définir la taille de la pagination
+\fancyfoot[C]{\fontsize{9}{11}\selectfont \thepage} % 9 pt pour la pagination
 
 \begin{document}
+\justifying % Justifier le texte
+\onehalfspacing % Définir l'interligne à 1,5 pt
+\addtolength{\parskip}{6pt} % Définit l'espacement entre les paragraphes
+\setlength{\parindent}{15pt} % Définit l'indentation
 
 % Page de garde
-\maketitle
-\newpage
+\begin{titlepage}
+    \begin{center}
+        \vspace*{\fill}
 
-% Remerciements
-\chapter*{Remerciements}
-\addcontentsline{toc}{chapter}{Remerciements}
+                % Logo de l'école
+                \includegraphics[width=0.3\textwidth]{images/logo.png}\\[1cm]
+                
+                {\Large \textbf{École Hexagone}}\\[0.5cm]
+                {\small Mastère Architecture des Systèmes d'Information}\\[0.5cm]
+
+                \rule{\linewidth}{0.5mm}\\[1cm]
+                
+                {\LARGE \textbf{Assistant intelligent pour la mémorisation}} \\[0.5cm]
+                {\Large Comment l'intelligence artificielle peut-elle améliorer l'assistance à la mémorisation et l'accessibilité cognitive ?}\\[0.5cm]
+
+                \rule{\linewidth}{0.5mm}\\[1cm]
+                
+                \textbf{Mémoire de fin d'études réalisé par}\\
+                {\Large Valentin POIGT}\\[1cm]
+                
+                \textbf{Encadré par}\\
+                {\Large Docteur Cyril-Alexandre PACHON}\\[0.5cm]
+
+                \vspace*{\fill}
+                
+                {\Large Année universitaire 2024 – 2025}
+        \vspace*{\fill}
+    \end{center}
+\end{titlepage}
 
 % Résumé
 \chapter*{Résumé}
 \addcontentsline{toc}{chapter}{Résumé}
 
 % Sommaire
+\chapter*{Sommaire}
+\addcontentsline{toc}{chapter}{Sommaire}
 \tableofcontents
-\newpage
 
 % Liste des figures et tableaux
 \listoffigures
@@ -53,36 +96,116 @@
 \chapter*{Glossaire}
 \addcontentsline{toc}{chapter}{Glossaire}
 
+% Préface (optionnel)
+\chapter*{Préface}
+\addcontentsline{toc}{chapter}{Préface}
+
+% Remerciements
+\chapter*{Remerciements}
+\addcontentsline{toc}{chapter}{Remerciements}
+
 % Introduction
-\chapter{Introduction}
-\section{Contexte et problématique}
-\section{Objectifs du mémoire}
-\section{Originalité et pertinence}
-\section{Plan du mémoire}
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
 
-% État de l’Art
-\chapter{État de l’Art}
-\section{Technologies de Transcription Vocale}
-\section{Traitement du Langage Naturel (NLP) pour le Résumé Automatique}
-\section{Synthèse Vocale (TTS)}
+La mémoire constitue une fonction cognitive essentielle pour l'être humain. Elle permet d'acquérir, de stocker et de restituer des informations nécessaires à la vie quotidienne. Sans cette capacité, l'apprentissage deviendrait impossible et l'adaptation à un environnement en constante évolution serait fortement limitée. Pourtant, la mémoire n'est pas infaillible. De nombreux facteurs influencent son efficacité. Le stress, la surcharge cognitive, les troubles neurologiques ou encore l'âge altèrent la capacité à retenir des informations de manière durable.
 
-% Aspects Techniques
-\chapter{Aspects Techniques}
-\section{Architecture Générale d’un Système de Synthèse de Réunion}
-\section{Pipeline de Traitement des Données}
-\section{Outils et Environnements Technologiques}
+L'augmentation de la quantité d'informations disponibles dans le monde numérique moderne impose de nouvelles contraintes. Assimiler et retenir des données devient une tâche de plus en plus complexe. Face à cette problématique, l'intelligence artificielle représente une opportunité pour compenser certaines limites cognitives et optimiser les processus de mémorisation. Grâce aux avancées technologiques en apprentissage automatique, en traitement du langage naturel et en reconnaissance vocale, il est désormais possible de concevoir des outils capables de structurer, d'adapter et de restituer des connaissances en fonction des besoins spécifiques de chaque individu.
 
-% Analyse des Applications Possibles
-\chapter{Analyse des Applications Possibles}
+Les technologies d'intelligence artificielle sont déjà présentes dans plusieurs domaines. Les assistants conversationnels, les plateformes d'apprentissage adaptatif et les systèmes de rappel intelligent sont utilisés pour améliorer l'accès aux informations. Les applications dédiées à l'éducation exploitent ces innovations pour adapter les contenus pédagogiques en fonction des profils des apprenants. L'intelligence artificielle trouve également une application dans la santé cognitive. Des outils spécialisés assistent les personnes atteintes de troubles de la mémoire en leur proposant des rappels automatisés et des exercices de stimulation cognitive.
 
-% Discussion
-\chapter{Discussion}
-\section{Avantages et limites des solutions existantes}
-\section{Défis techniques et perspectives d’évolution}
+Cependant, malgré ces avancées, des questions subsistent. L'intelligence artificielle est-elle réellement capable d'améliorer la mémorisation et de faciliter l'accès aux connaissances ? Ces solutions sont-elles accessibles à tous et adaptées aux différents profils d'utilisateurs ? Quels sont les défis techniques et éthiques liés à leur utilisation ?
+
+\newpage
+Ce mémoire vise à répondre à ces interrogations en structurant l'analyse autour de trois axes. Tout d'abord, il est essentiel de comprendre les mécanismes de la mémoire humaine, ses limites et les défis rencontrés dans l'acquisition et la rétention d'informations. Ensuite, l'étude des technologies d'intelligence artificielle appliquées à la mémoire permet d'identifier les outils existants et d'évaluer leur efficacité. Enfin, l'analyse des applications concrètes et des enjeux liés à ces solutions apporte un éclairage sur les défis éthiques, techniques et ergonomiques, ainsi que sur les perspectives d'évolution dans ce domaine.
+
+Ainsi, ce mémoire s'attache à explorer le potentiel de l'intelligence artificielle pour améliorer l'assistance à la mémorisation et l'accessibilité cognitive, tout en mettant en avant les opportunités et les limites de ces technologies. L'objectif est d'identifier des pistes d'amélioration permettant d'optimiser ces outils et de garantir une utilisation éthique et efficace au service des utilisateurs.
+
+% 1 - Contexte et Problématique
+\chapter{La mémoire humaine et ses limites}
+
+\section{Les mécanismes de la mémoire}
+
+\subsection{Définition et fonctionnement de la mémoire}
+
+La mémoire est une fonction cognitive essentielle qui nous permet d'acquérir, de conserver et de restituer des informations, nous permettant ainsi d'interagir efficacement avec notre environnement. Elle est au cœur de notre identité, de notre capacité d'apprentissage et de notre adaptation au monde qui nous entoure. Comprendre les mécanismes de la mémoire implique d'explorer ses différentes formes, les processus qui la sous-tendent et les facteurs qui l'influencent.
+
+La mémoire humaine est complexe et se divise en plusieurs systèmes interconnectés, chacun ayant des caractéristiques spécifiques.
+
+La mémoire sensorielle, ou perceptive, est la capacité à retenir des informations sensorielles pendant une très courte durée, généralement inférieure à une seconde. Elle permet de retenir des images ou des sons sans s’en rendre compte, facilitant ainsi des actions routinières sans effort conscient.
+
+La mémoire à court terme (MCT), également appelée mémoire de travail, est celle que nous utilisons pour conserver temporairement des informations dans le présent. Elle nous permet de retenir des éléments sur une durée allant de quelques fractions de seconde à environ dix minutes après leur entrée dans le cerveau. En moyenne, un individu est capable de mémoriser simultanément jusqu'à sept éléments distincts.
+
+La mémoire à long terme (MLT) est quant à elle responsable du stockage des informations sur une période prolongée, potentiellement illimitée. Elle se divise en deux grandes catégories. La mémoire déclarative, aussi appelée mémoire explicite, concerne les souvenirs que nous pouvons exprimer verbalement, comme des faits ou des événements. Elle comprend la mémoire épisodique, qui regroupe les souvenirs personnels liés à des expériences vécues, comme un anniversaire ou un voyage, ainsi que la mémoire sémantique, qui rassemble les connaissances générales sur le monde, telles que la capitale d’un pays ou des concepts scientifiques.
+
+La mémoire non déclarative, ou mémoire implicite, regroupe quant à elle les souvenirs qui influencent notre comportement de manière inconsciente. Elle inclut notamment les habiletés motrices, comme faire du vélo, ainsi que les conditionnements qui façonnent nos réactions et apprentissages automatiques.
+
+La mémorisation repose sur trois processus fondamentaux : l'encodage, le stockage et la récupération.
+
+L'encodage constitue la première étape, au cours de laquelle l'information est transformée en une forme exploitable par le cerveau. Lorsqu'une donnée parvient à un neurone, elle déclenche la production de protéines qui permettent la création d’un réseau neuronal spécifique associé au souvenir. Ce phénomène, appelé plasticité synaptique, est essentiel au renforcement des connexions entre les neurones et à l’apprentissage.
+
+Le stockage intervient après l’encodage. Il s'agit du moment où l’information est classée et maintenue dans le cerveau, prête à être réactivée en fonction des besoins et des situations rencontrées.
+
+Enfin, la récupération correspond à l'accès aux informations stockées lorsque cela s’avère nécessaire. La capacité à retrouver un souvenir dépend de la qualité de l'encodage et du stockage, ainsi que des indices présents au moment de la remémoration.
+
+Différents facteurs influencent l’efficacité de la mémorisation. Les émotions jouent un rôle déterminant dans ce processus. Les expériences marquées par une forte charge émotionnelle sont généralement mieux retenues que les événements neutres. Toutefois, des émotions trop intenses, comme le stress, peuvent altérer la mémoire à court terme.
+
+La répétition constitue un autre élément clé dans le renforcement de la mémoire. Répéter une information permet de mieux la consolider et d’en faciliter l’accès ultérieur. La répétition espacée, qui consiste à revoir les informations à intervalles réguliers, se révèle particulièrement efficace pour favoriser la rétention à long terme.
+
+Enfin, l'attention joue un rôle essentiel dans le processus de mémorisation. Sans une concentration adéquate, l’encodage des informations peut être altéré, rendant leur récupération plus difficile. L’attention est donc un facteur déterminant dans la qualité de l’apprentissage et de la remémoration.
+
+\section{Les troubles de la mémoire et leurs impacts}
+Vieillissement cognitif et maladies neurodégénératives (Alzheimer, Parkinson)
+Troubles de l'attention et de l'apprentissage (TDAH, dyslexie)
+Surcharge cognitive et oubli informationnel
+\section{Besoins et solutions existantes pour améliorer la mémorisation}
+Méthodes traditionnelles (mnémoniques, répétition espacée)
+Utilisation des technologies numériques actuelles
+Limites des approches classiques
+\chapter{L'intelligence artificielle au service de la mémorisation}
+\section{Présentation des technologies d'IA utilisées pour l'assistance cognitive}
+Traitement du langage naturel (NLP)
+Apprentissage automatique et adaptatif
+Reconnaissance vocale et synthèse de la parole
+\section{Les assistants intelligents pour la mémoire}
+Présentation des outils et applications existantes
+Assistants vocaux (Siri, Alexa, Google Assistant)
+Systèmes de rappel intelligents (Google Keep, Todoist avec IA)
+Applications de mémorisation (Anki, Memrise, Duolingo)
+Fonctionnement et personnalisation des réponses en fonction des utilisateurs
+\section{Avantages et limites de l'IA dans l'amélioration de la mémoire}
+Amélioration de la rétention et de l'accessibilité de l'information
+Adaptabilité et personnalisation
+Risques et limites : dépendance technologique, confidentialité, biais algorithmiques
+\chapter{Applications concrètes et enjeux éthiques}
+\section{L'IA dans l'éducation et l'apprentissage adaptatif}
+Plateformes intelligentes pour l'éducation (Khan Academy, Coursera avec IA)
+Personnalisation de l'apprentissage en fonction des performances de l'utilisateur
+Suivi et analyse des progrès
+\section{L'IA pour les personnes atteintes de troubles cognitifs}
+Outils pour les seniors et les malades d'Alzheimer
+Aide aux personnes atteintes de TDAH ou de dyslexie
+Interfaces cerveau-ordinateur pour compenser les déficiences mnésiques
+\section{Enjeux éthiques et défis techniques}
+Confidentialité des données et respect de la vie privée
+Fiabilité et contrôle des algorithmes
+Accessibilité et inclusion : l'IA peut-elle être universellement efficace ?
 
 % Conclusion
-\chapter{Conclusion}
-hdsgcfkjhdsbfshgffskhgfkshgkjfsk\footnote{Ceci est une note de bas de page.}
+\chapter*{Conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}
+hdsgc fkjhdsbf shgffskhg fkshgkjfsk\footnote{Ceci est une note de bas de page.}
+
+Récapitulatif des apports de l'IA dans l'amélioration de la mémorisation
+Perspectives d'évolution des technologies IA dans ce domaine
+Limites et pistes d'amélioration
+Réflexion sur l'impact futur des assistants intelligents dans la cognition humaine
+
+
+
+% Postface (optionnel)
+\chapter*{Postface}
+\addcontentsline{toc}{chapter}{Postface}
 
 % Bibliographie
 \chapter*{Bibliographie}
