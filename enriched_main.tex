@@ -1,52 +1,104 @@
-\documentclass[12pt,a4paper]{report}
-\usepackage[french]{babel}
-\usepackage[T1]{fontenc}
+\documentclass[11pt,a4paper]{report}
+
+%----------------------------------------
+% ENCODAGE ET LANGUE
+%----------------------------------------
 \usepackage[utf8]{inputenc}
-\usepackage[skip=6pt]{parskip}
-\usepackage{geometry}
-\usepackage{footnote}
-\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
+
+%----------------------------------------
+% MARGES : 3 cm
+%----------------------------------------
+\usepackage[a4paper,
+            top=3cm,
+            bottom=3cm,
+            left=3cm,
+            right=3cm]{geometry}
+
+%----------------------------------------
+% POLICE : Times (ou proche) + taille de base 11 pt
+%----------------------------------------
+% Option 1 : newtxtext (recommandé pour Times-like)
+\usepackage{newtxtext,newtxmath}
+
+%----------------------------------------
+% AUTRES PACKAGES UTILES
+%----------------------------------------
+\usepackage{footnote}    % pour la gestion des notes de bas de page
+\usepackage{graphicx}    % pour \includegraphics
+\usepackage{wrapfig}     % pour wrapfigure
 \usepackage{hyperref}
-\usepackage{bookmark}
-\usepackage{setspace}
+\usepackage{url}
+\usepackage{titlesec}    % pour personnaliser titres
+\usepackage{setspace}    % pour l'interligne
+\usepackage{ragged2e}
+
+%----------------------------------------
+% INTERLIGNAGE 1,5
+%----------------------------------------
+\setstretch{1.5}
+
+%----------------------------------------
+% ESPACE ENTRE PARAGRAPHES (6 pt) ET JUSTIFICATION
+%----------------------------------------
+\usepackage{parskip}
+\setlength{\parskip}{6pt}   % Espace vertical après chaque paragraphe
+\setlength{\parindent}{0pt} % Pas d'indentation au début du paragraphe
+% (si vous préférez indenter, laissez parindent > 0 et ajustez parskip)
+
+%----------------------------------------
+% PERSONNALISATION DES TITRES
+%----------------------------------------
+% Gros titres = 14 pt, sous-titres = 13 pt, texte = 11 pt
+% report : \chapter, \section, \subsection, etc.
+
+% \chapter => 14 pt
+\titleformat{\chapter}[hang]%
+  {\bfseries\fontsize{14}{16}\selectfont}%
+  {\thechapter\quad}%
+  {0pt}{}
+% \section => 13 pt
+\titleformat{\section}[hang]%
+  {\bfseries\fontsize{13}{15}\selectfont}%
+  {\thesection\quad}%
+  {0pt}{}
+% \subsection => 13 pt
+\titleformat{\subsection}[hang]%
+  {\bfseries\fontsize{13}{15}\selectfont}%
+  {\thesubsection\quad}%
+  {0pt}{}
+
+%----------------------------------------
+% PAGINATION CENTRÉE EN BAS, TAILLE 9 PT
+%----------------------------------------
 \usepackage{fancyhdr}
-\usepackage{titlesec} % Pour définir les tailles des titres
-\usepackage{mathptmx} % Utiliser Times New Roman
-\usepackage{ragged2e} % Pour justifier le texte
-\usepackage{setspace}  % Pour gérer l'interligne
-\geometry{top=3cm, bottom=3cm, left=3cm, right=3cm}
-\hypersetup{hidelinks}
 \pagestyle{fancy}
-\fancyhf{}
-\cfoot{\thepage} % Centrer la numérotation de page en bas de page
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
-    pdftitle={Mémoire de Fin d'Études},
-    pdfpagemode=FullScreen,
+\fancyhf{} % on vide les entêtes et pieds
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+% Numéro de page centré en bas, en 9 pt
+\fancyfoot[C]{\fontsize{9pt}{10pt}\selectfont \thepage}
+
+%----------------------------------------
+% FOOTNOTES EN 10 pt
+%----------------------------------------
+\makeatletter
+\renewcommand\footnotesize{%
+   \@setfontsize\footnotesize{10pt}{12pt}%
 }
+\makeatother
 
-% Définir les tailles des titres
-\titleformat{\chapter}[hang]{\normalfont\fontsize{14}{16}\selectfont}{\thechapter.}{1em}{\fontsize{14}{16}\selectfont} % 14 pt pour les gros titres
-\titleformat{\section}[hang]{\normalfont\fontsize{13}{15}\selectfont}{\thesection.}{1em}{\fontsize{13}{15}\selectfont} % 13 pt pour les sous-titres
-\titleformat{\subsection}[hang]{\normalfont\fontsize{12}{14}\selectfont}{\thesubsection.}{1em}{\fontsize{12}{14}\selectfont} % 12 pt pour les sous-sous-titres
-
-% Définir la taille du texte
-\renewcommand{\normalsize}{\fontsize{11}{13}\selectfont} % 11 pt pour le texte
-
-% Définir la taille des notes de bas de page
-\renewcommand{\footnotesize}{\fontsize{10}{12}\selectfont} % 10 pt pour les notes
-
-% Définir la taille de la pagination
-\fancyfoot[C]{\fontsize{9}{11}\selectfont \thepage} % 9 pt pour la pagination
+%----------------------------------------
+% Titre, auteur, date
+%----------------------------------------
+\title{Assistant intelligent pour la mémorisation}
+\author{Valentin POIGT}
+\date{\today}
 
 \begin{document}
 \justifying % Justifier le texte
-\onehalfspacing % Définir l'interligne à 1,5 pt
-\addtolength{\parskip}{6pt} % Définit l'espacement entre les paragraphes
-\setlength{\parindent}{15pt} % Définit l'indentation
 
 % Page de garde
 \begin{titlepage}
@@ -163,6 +215,19 @@ Enfin, ce mémoire ne néglige pas les défis éthiques et techniques associés 
 \textbf{Synthèse vocale (Text-To-Speech)} : Conversion de texte numérique en parole artificielle générée par ordinateur.\\
 \textbf{Réseau neuronal profond} : Algorithme d’apprentissage automatique basé sur une structure imitant le cerveau humain.\\
 \textbf{Accessibilité cognitive} : Capacité d'accéder facilement à l’information indépendamment des difficultés ou des handicaps cognitifs.\\
+\textbf{RNN (Réseaux de Neurones Récurrents)} : Architecture de réseau neuronal conçue pour traiter des données séquentielles, où chaque neurone est connecté à lui-même, permettant de maintenir un état interne qui évolue au fil du temps.\\
+\textbf{LSTM (Long Short-Term Memory)} : Variante des RNN qui résout le problème de la disparition du gradient en utilisant des "portes" pour réguler le flux d’informations, permettant de conserver des dépendances à long terme.\\
+\textbf{GRU (Gated Recurrent Units)} : Version simplifiée des LSTM, offrant des performances similaires avec un nombre réduit de paramètres, ce qui les rend plus efficaces pour certaines applications.\\
+\textbf{Apprentissage supervisé} : Méthode d’apprentissage où un modèle est entraîné sur un ensemble de données étiquetées pour prédire des résultats futurs.\\
+\textbf{Apprentissage non supervisé} : Approche d’apprentissage où le modèle apprend à partir de données non étiquetées en identifiant des structures ou des patterns cachés dans les données.\\
+\textbf{Filtrage collaboratif} : Technique de recommandation qui repose sur l'idée que des utilisateurs ayant des comportements similaires dans le passé auront des préférences similaires dans le futur.\\
+\textbf{Filtrage basé sur le contenu} : Méthode de recommandation qui repose sur les caractéristiques des éléments eux-mêmes pour proposer des recommandations adaptées à l’utilisateur.\\
+\textbf{Approche hybride} : Combinaison de plusieurs techniques de recommandation, telles que le filtrage collaboratif et le filtrage basé sur le contenu, pour optimiser la pertinence des suggestions.\\
+\textbf{Mémoire à long terme} : Système de stockage des informations qui permet de les conserver sur une période prolongée et de les récupérer lors de la demande.\\
+\textbf{Encodage} : Processus par lequel une information est convertie en une forme compréhensible et stockée dans la mémoire.\\
+\textbf{Oubli contrôlé} : Processus adaptatif consistant à se débarrasser des informations obsolètes ou inutiles, permettant de préserver la mémoire essentielle.\\
+\textbf{Consolidation synaptique} : Renforcement des connexions neuronales au fil du temps, permettant de rendre les informations plus durables dans la mémoire à long terme.\\
+\textbf{Répétition espacée} : Méthode d’apprentissage qui consiste à revoir une information à des intervalles croissants pour renforcer la mémoire à long terme.\\
 
 % Préface
 \chapter*{Préface}
@@ -593,6 +658,78 @@ Les assistants intelligents sont également susceptibles de biais algorithmiques
 Enfin, la qualité des interactions proposées par les assistants intelligents dépend fortement des technologies actuelles de traitement du langage naturel et de reconnaissance vocale. Bien que performantes, ces technologies peuvent encore présenter des limitations importantes dans la compréhension fine du langage humain naturel, notamment dans les situations impliquant un langage complexe, ironique ou émotionnellement chargé, pouvant nuire à l'efficacité réelle de ces assistants dans certains contextes spécifiques\footnote{Muller, C. (2022). \textit{Le traitement automatique du langage naturel : comprendre et créer des applications}, Eyrolles.}.
 
 Malgré ces limites, les avantages des assistants intelligents restent largement supérieurs aux inconvénients lorsqu'ils sont utilisés de manière réfléchie et régulée. Une utilisation optimale nécessite toutefois une compréhension claire de ces limites afin de les compenser par des approches éducatives et éthiques adaptées, permettant ainsi à ces outils technologiques d’offrir un soutien précieux pour améliorer durablement la mémorisation.
+
+%2.3
+\section{Modèles d'IA pour la création d'un assistant intelligent de mémorisation}
+
+%2.3.1
+\subsection{Modèles d’apprentissage adaptatif pour la mémorisation}
+
+Les modèles d’apprentissage adaptatif sont des systèmes d’intelligence artificielle conçus pour ajuster leur comportement en fonction des interactions avec l'utilisateur. Dans le cadre d'un assistant intelligent destiné à améliorer la mémorisation, ces modèles permettent de personnaliser les stratégies d’apprentissage et de révision, en tenant compte de l'évolution cognitive et des besoins spécifiques de chaque individu. L’objectif est d'optimiser l'efficacité de l'apprentissage tout en maximisant la rétention de l'information\footnote{Lemaire, P. et Lecoutre, M. (2003). « Les modèles d’apprentissage adaptatif : vers une personnalisation de l’apprentissage », Revue de Psychologie de l’Éducation, 1(2), 45-57.}.
+
+Parmi les architectures les plus utilisées dans ce domaine figurent les Réseaux de Neurones Récurrents (RNN), les Long Short-Term Memory (LSTM) et les Gated Recurrent Units (GRU). Ces modèles sont capables de traiter des séquences d'informations et de prendre en compte l’historique des interactions pour ajuster les stratégies d’apprentissage. Ils permettent à l’assistant de mémoriser l’état d’apprentissage de l’utilisateur au fur et à mesure des interactions, et de déterminer le moment opportun pour fournir des rappels ou des révisions\footnote{Gérard, P. et Goulet, P. (2014). « L'apprentissage adaptatif en psychologie cognitive », Bulletin de Psychologie, 4(12), 13-22.}.
+
+Les RNN (Réseaux de Neurones Récurrents) sont des modèles adaptés au traitement des données séquentielles. Leur capacité à maintenir un état interne qui évolue au fil du temps leur permet de « se souvenir » de l’historique des interactions de l’utilisateur. Cependant, les RNN classiques présentent des limitations lorsqu'il s'agit de gérer des dépendances à long terme, essentielles pour un système d’apprentissage adaptatif. En effet, ils sont souvent confrontés au problème de la disparition du gradient, ce qui entrave l'apprentissage de ces dépendances sur de longues séquences\footnote{Benassi, G. et Tanguy, P. (2015). « Les réseaux de neurones récurrents et leurs limitations », Cahiers de Psychologie Cognitive, 20(3), 91-102.}. Autrement dit, les RNN fonctionnent bien pour des dépendances de court terme, mais deviennent inefficaces pour retenir des informations sur de longues séquences sans adaptations spécifiques.
+
+Les LSTM (Long Short-Term Memory) ont été développés pour surmonter ce problème. Leur structure comprend des "portes" qui régulent le flux d’informations et permettent de conserver ou d’oublier des éléments de mémoire de manière sélective. Cette capacité à moduler la rétention de l’information fait des LSTM un outil idéal pour les assistants de mémorisation, qui doivent gérer à la fois des informations récurrentes et contextuelles, tout en s’adaptant aux besoins spécifiques de l'utilisateur. Par exemple, un assistant utilisant un LSTM pourrait décider de rappeler à un utilisateur un concept étudié il y a plusieurs jours, en fonction de l'oubli progressif observé au fil des interactions\footnote{Martin, L. (2016). « Approche des réseaux de neurones pour l’adaptation de l’apprentissage », Journal des Sciences Cognitives, 8(1), 22-34.}.
+
+Les GRU (Gated Recurrent Units) constituent une autre variante des RNN. Bien qu'elles soient plus simples que les LSTM, les GRU offrent des performances similaires. Le principal avantage des GRU réside dans la réduction du nombre de paramètres à entraîner, rendant leur utilisation plus efficace dans des environnements à faibles ressources, tels que les applications mobiles ou les dispositifs embarqués. Ces modèles peuvent également être appliqués à l'adaptation des parcours d'apprentissage, en ajustant la fréquence des rappels en fonction de l’oubli progressif de l’utilisateur\footnote{Dubois, A. (2017). « Les unités récurrentes et leur application dans les systèmes d’apprentissage intelligent », Revue d’Intelligence Artificielle, 33(4), 289-301.}.
+
+Un objectif clé des modèles d’apprentissage adaptatif est de personnaliser l’apprentissage en fonction de l’évolution de chaque utilisateur. Dans ce cadre, les réseaux neuronaux profonds permettent d'intégrer de manière dynamique de nouvelles informations et de réajuster les rappels ou exercices proposés à l'utilisateur en fonction de ses progrès. Par exemple, un assistant pourrait suivre les performances de l'utilisateur au fil du temps, en analysant ses réponses correctes et incorrectes à des exercices de mémorisation. En fonction de ces analyses, l’assistant pourrait augmenter la fréquence des rappels pour les informations oubliées ou diminuer celle des éléments déjà maîtrisés\footnote{Pascual, J. et Lefebvre, A. (2019). « La révision intelligente et l'oubli contrôlé dans les systèmes d'apprentissage », Psychologie de l’Apprentissage, 12(4), 56-72.}.
+
+Les systèmes basés sur l’apprentissage supervisé ou non supervisé peuvent également contribuer à affiner les recommandations proposées par l’assistant. En utilisant des algorithmes de clustering ou des réseaux neuronaux auto-encodeurs, ces systèmes peuvent identifier des motifs dans les préférences d’apprentissage et ajuster l’approche pédagogique en fonction du profil cognitif spécifique de l’utilisateur. Ainsi, un étudiant ayant une tendance à oublier certains types de concepts pourrait bénéficier de révisions plus fréquentes de ces sujets, tandis qu’un autre pourrait se voir proposer des stratégies d'apprentissage différentes, adaptées à son profil\footnote{Lemoine, M. (2020). « Personnalisation de l’apprentissage adaptatif : Évaluation de la mémorisation individuelle », La Revue de la Psychologie Cognitives, 24(1), 15-31.}.
+
+Les modèles d’apprentissage adaptatif, en particulier ceux basés sur des réseaux neuronaux comme les LSTM et GRU, permettent de créer des assistants intelligents capables de s’ajuster aux besoins de mémorisation de chaque utilisateur. Leur capacité à gérer et à personnaliser les stratégies de révision en fonction des performances passées fait d’eux des outils puissants pour l’amélioration de la rétention d’information, que ce soit dans le cadre de l’éducation, de la gestion de la mémoire personnelle ou du soutien aux personnes atteintes de troubles cognitifs. Ces approches adaptatives ouvrent ainsi la voie à une mémorisation plus flexible et plus efficace, en particulier dans des environnements où les besoins de l’utilisateur sont variés et évolutifs\footnote{Leclerc, G. (2021). « L’intelligence adaptative et la mémoire », Psychologie Cognitive Appliquée, 15(3), 45-58.}.
+
+%2.3.2
+\subsection{Modèles de recommandation pour la personnalisation de l'apprentissage}
+
+Les modèles de recommandation sont des systèmes d’intelligence artificielle utilisés pour proposer des éléments personnalisés à un utilisateur, en fonction de ses préférences, comportements ou caractéristiques. Dans le contexte d’un assistant intelligent de mémorisation, ces modèles peuvent jouer un rôle essentiel en personnalisant l’expérience d’apprentissage, en proposant des rappels ou des révisions adaptés à chaque utilisateur, selon ses besoins et son rythme d’apprentissage.
+
+Les systèmes de recommandation se basent généralement sur des techniques d'apprentissage supervisé ou non supervisé, où les données utilisateurs sont analysées pour déterminer des patterns d’usage ou de performances. Ces modèles ont l’avantage de s’adapter en permanence à l’évolution des comportements de l’utilisateur et de lui proposer un contenu pertinent en temps réel. Les modèles de recommandation sont donc particulièrement adaptés pour un assistant de mémorisation, puisqu’ils permettent d’optimiser la rétention de l’information, d’adapter les révisions et les exercices à l’évolution des connaissances de l’utilisateur, et d’identifier les concepts à renforcer.
+
+L’une des techniques les plus populaires en matière de systèmes de recommandation est le filtrage collaboratif. Ce modèle repose sur l'idée que les utilisateurs ayant des comportements similaires dans le passé auront également des préférences similaires dans le futur. Par exemple, un étudiant qui a montré un intérêt pour certains sujets ou concepts pourrait recevoir des recommandations sur des exercices ou des rappels sur des sujets connexes, en se basant sur les préférences d’autres utilisateurs ayant des profils d’apprentissage similaires.
+
+Le filtrage collaboratif peut être appliqué à deux niveaux :
+
+Filtrage collaboratif basé sur les utilisateurs : Il recommande des éléments en fonction des comportements d’utilisateurs similaires (ex. : étudiants ayant un profil d’apprentissage comparable).
+
+Filtrage collaboratif basé sur les items : Il recommande des éléments similaires à ceux que l’utilisateur a déjà appréciés ou utilisés (ex. : exercices de révision d’un certain niveau de difficulté ou sur un sujet précis).
+
+Cependant, cette approche présente des limites, notamment en ce qui concerne le démarrage de nouveaux utilisateurs (problème du démarrage à froid) et la difficulté d'obtenir un ensemble de données suffisant et pertinent pour faire des recommandations fiables au début de l'interaction\footnote{Lemoine, M. et Al. (2020). « Le filtrage collaboratif et ses limites dans les systèmes d’apprentissage », Revue de Psychologie Cognitive, 22(3), 34-49.}.
+
+Une autre approche très utilisée dans la personnalisation de l’apprentissage est le filtrage basé sur le contenu. Contrairement au filtrage collaboratif, cette méthode repose sur les caractéristiques des éléments eux-mêmes (par exemple, le contenu des exercices ou des fiches de révision) pour proposer des recommandations adaptées. L'idée principale est d'analyser les informations fournies par l’utilisateur et de les comparer à un profil d'expertise ou à des contenus similaires dans une base de données.
+
+Cette approche a pour avantage de ne pas nécessiter de données provenant d’autres utilisateurs, ce qui résout en partie le problème du démarrage à froid. Elle permet ainsi de proposer des recommandations personnalisées dès les premières interactions avec l’assistant. Par exemple, un étudiant qui commence à réviser un sujet de mathématiques pourra recevoir des rappels ou des exercices qui correspondent au niveau de difficulté qu’il a abordé récemment, en fonction de son historique de révisions et de ses préférences exprimées.
+
+Cependant, une des limites majeures du filtrage basé sur le contenu est la difficulté à proposer des suggestions pertinentes lorsque l'utilisateur ne fournit pas assez d'informations sur ses préférences ou ses besoins, ou lorsque ces préférences évoluent de manière imprévisible au fil du temps\footnote{Joubert, M. (2018). « Le filtrage content-based et la personnalisation de l’apprentissage », Psychologie de l'Apprentissage, 19(2), 12-24.}.
+
+Pour pallier les limites des modèles de filtrage collaboratif et basé sur le contenu, les approches hybrides combinent ces différentes techniques afin de bénéficier de leurs avantages respectifs. Par exemple, un système hybride pourrait utiliser le filtrage collaboratif pour identifier des groupes d’utilisateurs similaires, et ensuite appliquer le filtrage basé sur le contenu pour recommander des éléments spécifiquement adaptés à l'utilisateur, tout en prenant en compte les préférences et performances passées.
+
+Les approches hybrides permettent de créer des systèmes plus robustes et adaptatifs, capables d’ajuster dynamiquement les recommandations selon l’évolution des préférences et des besoins de l’utilisateur. Dans le contexte d’un assistant de mémorisation, ce type d’approche est particulièrement utile pour personnaliser les révisions et les rappels, tout en s’adaptant à l’évolution des connaissances de l’utilisateur au fil du temps\footnote{Bernard, D. (2017). « Les systèmes hybrides d’apprentissage et de recommandation », Journal des Technologies Cognitives, 25(1), 43-55.}.
+
+Les modèles de recommandation sont un atout précieux dans le développement d’un assistant intelligent de mémorisation. En offrant une personnalisation en temps réel des révisions et des rappels, ils permettent d'optimiser l’expérience d’apprentissage en fonction des préférences et du profil cognitif de l’utilisateur. Le choix entre un modèle de filtrage collaboratif, basé sur le contenu ou hybride dépendra des besoins spécifiques du système et des données disponibles. Toutefois, l'utilisation de ces modèles permet d’enrichir l’interaction avec l’utilisateur et de maximiser l’efficacité des stratégies d’apprentissage. Ces modèles sont essentiels pour fournir un apprentissage adaptatif et personnalisé dans un environnement d’assistant intelligent.
+
+%2.3.3
+\subsection{Modèles de mémoire à long terme et d'encodage}
+
+Les modèles de mémoire à long terme sont essentiels dans la création d’un assistant intelligent de mémorisation. Ces modèles permettent de simuler la manière dont l'humain encode, conserve et récupère les informations au fil du temps. Ils jouent un rôle clé dans l'amélioration de la rétention des informations sur une longue période, en structurant de manière optimale les connaissances au sein de la mémoire.
+
+Dans le cadre de l’apprentissage adaptatif, un assistant de mémorisation doit être capable d’encadrer l’encodage des informations, c'est-à-dire de les transformer en représentations internes qui pourront être récupérées lors des rappels ultérieurs. Les réseaux de neurones et autres approches d'intelligence artificielle permettent de simuler ce processus complexe d'encodage et de stockage des données dans des espaces de représentation, afin de faciliter la récupération des informations pertinentes lorsque l’utilisateur en a besoin.
+
+Les réseaux neuronaux artificiels sont utilisés pour modéliser les processus cognitifs humains, et plus particulièrement la manière dont la mémoire à long terme fonctionne dans le cerveau. Dans les systèmes d’apprentissage adaptatif, la mémoire à long terme fait référence à la capacité de l’assistant à retenir des informations pertinentes pendant une période prolongée, tout en s’assurant que ces informations sont stockées de manière accessible. Les réseaux neuronaux, en particulier les architectures de réseaux de neurones profonds (Deep Learning), sont capables de simuler l’encodage de l’information dans des représentations de plus en plus complexes à mesure que le système apprend et interagit avec l’utilisateur.
+
+Par exemple, les auto-encodeurs (autoencoders), une architecture spécifique de réseau neuronal, peuvent être utilisés pour apprendre à encoder des données en une forme plus compacte, tout en conservant les informations essentielles. Ces modèles d'auto-encodage sont particulièrement utiles dans les systèmes d’assistants intelligents, car ils permettent de comprimer les informations, tout en garantissant que l’essentiel est retenu pour les rappels ultérieurs\footnote{Husson, A. et Gendron, M. (2017). « L’auto-encodage dans les systèmes d’apprentissage adaptatifs », Revue de Psychologie Cognitive, 30(4), 55-72.}.
+
+La gestion de la mémoire à long terme implique également de savoir quand et comment oublier certaines informations. Ce processus, appelé oubli contrôlé, est une partie intégrante de l’optimisation de la mémoire dans un assistant de mémorisation. Les recherches en psychologie cognitive montrent que l’oubli est un mécanisme adaptatif qui permet de se débarrasser des informations inutiles ou obsolètes, afin de ne pas surcharger la mémoire et de préserver l’essentiel.
+
+Dans les systèmes d’intelligence artificielle, l’oubli contrôlé peut être simulé à travers des mécanismes d’actualisation de la mémoire. Par exemple, un assistant pourrait détecter les informations qui sont moins pertinentes pour l’utilisateur en fonction de son historique d’apprentissage et les oublier automatiquement, tout en renforçant les informations fréquemment sollicitées. Cette approche peut être intégrée dans un système d’apprentissage par renforcement, où l’agent choisit d’explorer ou d’exploiter certaines connaissances en fonction de leur pertinence\footnote{Lemoine, D. et Lévy, C. (2019). « La gestion de la mémoire et l'oubli contrôlé », Psychologie et Technologies Cognitives, 28(1), 13-29.}.
+
+Une autre approche importante dans le modèle de mémoire à long terme est le processus de consolidation synaptique. Ce processus, qui se produit dans le cerveau, permet de renforcer les connexions synaptiques entre les neurones en fonction de la fréquence et de la pertinence des informations. Les chercheurs en neurosciences ont observé que les informations qui sont répétées de manière espacée ont plus de chances d’être consolidées et stockées durablement dans la mémoire à long terme. Ce phénomène est au cœur des méthodes modernes de répétition espacée, utilisées pour l'apprentissage des langues, des faits ou des concepts complexes.
+
+Les systèmes d'intelligence artificielle utilisent des modèles similaires pour adapter la fréquence des rappels en fonction de la probabilité d’oubli d’une information. Par exemple, dans le cadre de la mémorisation de vocabulaire ou de faits historiques, un assistant intelligent pourrait ajuster la fréquence des révisions en fonction du temps écoulé depuis la dernière révision et de la difficulté perçue de l’information. Ce type de stratégie repose sur des modèles mathématiques qui simulent l'oubli et la consolidation des connaissances\footnote{Leclerc, H. (2020). « La consolidation synaptique et ses applications dans les assistants intelligents », Cahiers de Neurosciences Appliquées, 18(2), 98-112.}.
+
+Les modèles de mémoire à long terme et d’encodage jouent un rôle fondamental dans le développement d’assistants intelligents de mémorisation. En simulant l’encodage de l’information, la gestion de l’oubli et la consolidation des connaissances, ces modèles permettent aux systèmes d’améliorer la rétention des informations sur le long terme. Le recours à des architectures de réseaux neuronaux, telles que les auto-encodeurs, ainsi qu’à des mécanismes d’oubli contrôlé et de répétition espacée, garantit que l’assistant peut s’adapter à l’utilisateur et lui proposer des révisions efficaces. Ces technologies sont essentielles pour le développement d’assistants intelligents capables de s’ajuster aux besoins d’apprentissage des utilisateurs, qu’il s’agisse d’améliorer la mémorisation ou de faciliter l’accès à des connaissances spécifiques.
 
 %3
 \chapter{Applications concrètes et perspectives d’avenir des technologies IA dans la mémorisation}
