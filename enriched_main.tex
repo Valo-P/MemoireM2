@@ -695,17 +695,17 @@ Filtrage collaboratif basé sur les utilisateurs : Il recommande des éléments 
 
 Filtrage collaboratif basé sur les items : Il recommande des éléments similaires à ceux que l’utilisateur a déjà appréciés ou utilisés (ex. : exercices de révision d’un certain niveau de difficulté ou sur un sujet précis).
 
-Cependant, cette approche présente des limites, notamment en ce qui concerne le démarrage de nouveaux utilisateurs (problème du démarrage à froid) et la difficulté d'obtenir un ensemble de données suffisant et pertinent pour faire des recommandations fiables au début de l'interaction\footnote{Lemoine, M. et Al. (2020). « Le filtrage collaboratif et ses limites dans les systèmes d’apprentissage », Revue de Psychologie Cognitive, 22(3), 34-49.}.
+Cependant, cette approche présente des limites, notamment en ce qui concerne le démarrage de nouveaux utilisateurs (problème du démarrage à froid) et la difficulté d'obtenir un ensemble de données suffisant et pertinent pour faire des recommandations fiables au début de l'interaction\footnote{IBM 2024, Qu'est-ce que le filtrage collaboratif ? \cite{ibm2}}.
 
 Une autre approche très utilisée dans la personnalisation de l’apprentissage est le filtrage basé sur le contenu. Contrairement au filtrage collaboratif, cette méthode repose sur les caractéristiques des éléments eux-mêmes (par exemple, le contenu des exercices ou des fiches de révision) pour proposer des recommandations adaptées. L'idée principale est d'analyser les informations fournies par l’utilisateur et de les comparer à un profil d'expertise ou à des contenus similaires dans une base de données.
 
 Cette approche a pour avantage de ne pas nécessiter de données provenant d’autres utilisateurs, ce qui résout en partie le problème du démarrage à froid. Elle permet ainsi de proposer des recommandations personnalisées dès les premières interactions avec l’assistant. Par exemple, un étudiant qui commence à réviser un sujet de mathématiques pourra recevoir des rappels ou des exercices qui correspondent au niveau de difficulté qu’il a abordé récemment, en fonction de son historique de révisions et de ses préférences exprimées.
 
-Cependant, une des limites majeures du filtrage basé sur le contenu est la difficulté à proposer des suggestions pertinentes lorsque l'utilisateur ne fournit pas assez d'informations sur ses préférences ou ses besoins, ou lorsque ces préférences évoluent de manière imprévisible au fil du temps\footnote{Joubert, M. (2018). « Le filtrage content-based et la personnalisation de l’apprentissage », Psychologie de l'Apprentissage, 19(2), 12-24.}.
+Cependant, une des limites majeures du filtrage basé sur le contenu est la difficulté à proposer des suggestions pertinentes lorsque l'utilisateur ne fournit pas assez d'informations sur ses préférences ou ses besoins, ou lorsque ces préférences évoluent de manière imprévisible au fil du temps.
 
 Pour pallier les limites des modèles de filtrage collaboratif et basé sur le contenu, les approches hybrides combinent ces différentes techniques afin de bénéficier de leurs avantages respectifs. Par exemple, un système hybride pourrait utiliser le filtrage collaboratif pour identifier des groupes d’utilisateurs similaires, et ensuite appliquer le filtrage basé sur le contenu pour recommander des éléments spécifiquement adaptés à l'utilisateur, tout en prenant en compte les préférences et performances passées.
 
-Les approches hybrides permettent de créer des systèmes plus robustes et adaptatifs, capables d’ajuster dynamiquement les recommandations selon l’évolution des préférences et des besoins de l’utilisateur. Dans le contexte d’un assistant de mémorisation, ce type d’approche est particulièrement utile pour personnaliser les révisions et les rappels, tout en s’adaptant à l’évolution des connaissances de l’utilisateur au fil du temps\footnote{Bernard, D. (2017). « Les systèmes hybrides d’apprentissage et de recommandation », Journal des Technologies Cognitives, 25(1), 43-55.}.
+Les approches hybrides permettent de créer des systèmes plus robustes et adaptatifs, capables d’ajuster dynamiquement les recommandations selon l’évolution des préférences et des besoins de l’utilisateur. Dans le contexte d’un assistant de mémorisation, ce type d’approche est particulièrement utile pour personnaliser les révisions et les rappels, tout en s’adaptant à l’évolution des connaissances de l’utilisateur au fil du temps.
 
 Les modèles de recommandation sont un atout précieux dans le développement d’un assistant intelligent de mémorisation. En offrant une personnalisation en temps réel des révisions et des rappels, ils permettent d'optimiser l’expérience d’apprentissage en fonction des préférences et du profil cognitif de l’utilisateur. Le choix entre un modèle de filtrage collaboratif, basé sur le contenu ou hybride dépendra des besoins spécifiques du système et des données disponibles. Toutefois, l'utilisation de ces modèles permet d’enrichir l’interaction avec l’utilisateur et de maximiser l’efficacité des stratégies d’apprentissage. Ces modèles sont essentiels pour fournir un apprentissage adaptatif et personnalisé dans un environnement d’assistant intelligent.
 
@@ -718,15 +718,15 @@ Dans le cadre de l’apprentissage adaptatif, un assistant de mémorisation doit
 
 Les réseaux neuronaux artificiels sont utilisés pour modéliser les processus cognitifs humains, et plus particulièrement la manière dont la mémoire à long terme fonctionne dans le cerveau. Dans les systèmes d’apprentissage adaptatif, la mémoire à long terme fait référence à la capacité de l’assistant à retenir des informations pertinentes pendant une période prolongée, tout en s’assurant que ces informations sont stockées de manière accessible. Les réseaux neuronaux, en particulier les architectures de réseaux de neurones profonds (Deep Learning), sont capables de simuler l’encodage de l’information dans des représentations de plus en plus complexes à mesure que le système apprend et interagit avec l’utilisateur.
 
-Par exemple, les auto-encodeurs (autoencoders), une architecture spécifique de réseau neuronal, peuvent être utilisés pour apprendre à encoder des données en une forme plus compacte, tout en conservant les informations essentielles. Ces modèles d'auto-encodage sont particulièrement utiles dans les systèmes d’assistants intelligents, car ils permettent de comprimer les informations, tout en garantissant que l’essentiel est retenu pour les rappels ultérieurs\footnote{Husson, A. et Gendron, M. (2017). « L’auto-encodage dans les systèmes d’apprentissage adaptatifs », Revue de Psychologie Cognitive, 30(4), 55-72.}.
+Par exemple, les auto-encodeurs (autoencoders), une architecture spécifique de réseau neuronal, peuvent être utilisés pour apprendre à encoder des données en une forme plus compacte, tout en conservant les informations essentielles. Ces modèles d'auto-encodage sont particulièrement utiles dans les systèmes d’assistants intelligents, car ils permettent de comprimer les informations, tout en garantissant que l’essentiel est retenu pour les rappels ultérieurs\footnote{IBM, Qu'est-ce qu'un autoencodeur ? \cite{ibm3}}.
 
 La gestion de la mémoire à long terme implique également de savoir quand et comment oublier certaines informations. Ce processus, appelé oubli contrôlé, est une partie intégrante de l’optimisation de la mémoire dans un assistant de mémorisation. Les recherches en psychologie cognitive montrent que l’oubli est un mécanisme adaptatif qui permet de se débarrasser des informations inutiles ou obsolètes, afin de ne pas surcharger la mémoire et de préserver l’essentiel.
 
-Dans les systèmes d’intelligence artificielle, l’oubli contrôlé peut être simulé à travers des mécanismes d’actualisation de la mémoire. Par exemple, un assistant pourrait détecter les informations qui sont moins pertinentes pour l’utilisateur en fonction de son historique d’apprentissage et les oublier automatiquement, tout en renforçant les informations fréquemment sollicitées. Cette approche peut être intégrée dans un système d’apprentissage par renforcement, où l’agent choisit d’explorer ou d’exploiter certaines connaissances en fonction de leur pertinence\footnote{Lemoine, D. et Lévy, C. (2019). « La gestion de la mémoire et l'oubli contrôlé », Psychologie et Technologies Cognitives, 28(1), 13-29.}.
+Dans les systèmes d’intelligence artificielle, l’oubli contrôlé peut être simulé à travers des mécanismes d’actualisation de la mémoire. Par exemple, un assistant pourrait détecter les informations qui sont moins pertinentes pour l’utilisateur en fonction de son historique d’apprentissage et les oublier automatiquement, tout en renforçant les informations fréquemment sollicitées. Cette approche peut être intégrée dans un système d’apprentissage par renforcement, où l’agent choisit d’explorer ou d’exploiter certaines connaissances en fonction de leur pertinence\footnote{IBM 2024, Qu'est-ce que le filtrage collaboratif ? \cite{ibm2}}.
 
 Une autre approche importante dans le modèle de mémoire à long terme est le processus de consolidation synaptique. Ce processus, qui se produit dans le cerveau, permet de renforcer les connexions synaptiques entre les neurones en fonction de la fréquence et de la pertinence des informations. Les chercheurs en neurosciences ont observé que les informations qui sont répétées de manière espacée ont plus de chances d’être consolidées et stockées durablement dans la mémoire à long terme. Ce phénomène est au cœur des méthodes modernes de répétition espacée, utilisées pour l'apprentissage des langues, des faits ou des concepts complexes.
 
-Les systèmes d'intelligence artificielle utilisent des modèles similaires pour adapter la fréquence des rappels en fonction de la probabilité d’oubli d’une information. Par exemple, dans le cadre de la mémorisation de vocabulaire ou de faits historiques, un assistant intelligent pourrait ajuster la fréquence des révisions en fonction du temps écoulé depuis la dernière révision et de la difficulté perçue de l’information. Ce type de stratégie repose sur des modèles mathématiques qui simulent l'oubli et la consolidation des connaissances\footnote{Leclerc, H. (2020). « La consolidation synaptique et ses applications dans les assistants intelligents », Cahiers de Neurosciences Appliquées, 18(2), 98-112.}.
+Les systèmes d'intelligence artificielle utilisent des modèles similaires pour adapter la fréquence des rappels en fonction de la probabilité d’oubli d’une information. Par exemple, dans le cadre de la mémorisation de vocabulaire ou de faits historiques, un assistant intelligent pourrait ajuster la fréquence des révisions en fonction du temps écoulé depuis la dernière révision et de la difficulté perçue de l’information. Ce type de stratégie repose sur des modèles mathématiques qui simulent l'oubli et la consolidation des connaissances.
 
 Les modèles de mémoire à long terme et d’encodage jouent un rôle fondamental dans le développement d’assistants intelligents de mémorisation. En simulant l’encodage de l’information, la gestion de l’oubli et la consolidation des connaissances, ces modèles permettent aux systèmes d’améliorer la rétention des informations sur le long terme. Le recours à des architectures de réseaux neuronaux, telles que les auto-encodeurs, ainsi qu’à des mécanismes d’oubli contrôlé et de répétition espacée, garantit que l’assistant peut s’adapter à l’utilisateur et lui proposer des révisions efficaces. Ces technologies sont essentielles pour le développement d’assistants intelligents capables de s’ajuster aux besoins d’apprentissage des utilisateurs, qu’il s’agisse d’améliorer la mémorisation ou de faciliter l’accès à des connaissances spécifiques.
 
@@ -743,7 +743,7 @@ L’émergence de l’intelligence artificielle a donné naissance à des platef
 
 Plusieurs plateformes éducatives intelligentes existent actuellement, dont les plus reconnues sont Khan Academy, Coursera, Edmodo ou encore LabXchange. Ces systèmes utilisent intensivement l’intelligence artificielle et l’apprentissage adaptatif pour offrir des parcours pédagogiques entièrement personnalisés selon les performances et les profils cognitifs des utilisateurs.
 
-Par exemple, Khan Academy, créée en 2008 par Salman Khan, est une plateforme éducative qui couvre principalement les mathématiques, les sciences, l’informatique et les langues. Elle propose des parcours personnalisés grâce à des algorithmes intelligents qui analysent continuellement les résultats obtenus par les élèves pour adapter automatiquement les exercices proposés. Cette approche garantit que chaque apprenant progresse à son rythme, facilitant la mémorisation durable des connaissances acquises tout en renforçant la motivation intrinsèque\footnote{Dillenbourg, P. (2018). \textit{L’apprentissage adaptatif dans l’éducation numérique}, Presses Polytechniques Universitaires Romandes.}.
+Par exemple, Khan Academy, créée en 2008 par Salman Khan, est une plateforme éducative qui couvre principalement les mathématiques, les sciences, l’informatique et les langues. Elle propose des parcours personnalisés grâce à des algorithmes intelligents qui analysent continuellement les résultats obtenus par les élèves pour adapter automatiquement les exercices proposés. Cette approche garantit que chaque apprenant progresse à son rythme, facilitant la mémorisation durable des connaissances acquises tout en renforçant la motivation intrinsèque\footnote{UNESCO 2023, L'intelligence artificielle et l'éducation : vers une approche éthique et inclusive. \cite{unesco}}.
 
 Quant à la plateforme Coursera, elle propose des cours universitaires et professionnels en ligne issus d’universités prestigieuses à travers le monde. Coursera exploite également l’intelligence artificielle pour détecter les apprenants en difficulté et leur proposer automatiquement des contenus complémentaires, garantissant ainsi une mémorisation plus solide et une meilleure réussite globale dans les apprentissages suivis.
 
@@ -755,13 +755,13 @@ Le fonctionnement général des plateformes éducatives intelligentes repose sur
 Chaque interaction entre l’élève et la plateforme génère des données spécifiques sur ses compétences, ses lacunes et son rythme d’apprentissage. Ces données sont analysées par des algorithmes sophistiqués capables d’identifier précisément les points forts et les points faibles, permettant ainsi une personnalisation optimale des contenus proposés.
 
     \item Personnalisation dynamique :
-Grâce aux données collectées, ces plateformes ajustent automatiquement la difficulté des exercices, la fréquence des révisions, et même le type de ressources pédagogiques offertes aux apprenants. Ainsi, un élève en difficulté bénéficiera immédiatement d’exercices de renforcement ciblés, tandis qu’un élève plus performant accédera à des contenus plus complexes pour approfondir ses connaissances. Cette personnalisation directe favorise une mémorisation efficace et durable des savoirs\footnote{Dessus, P. (2020). \textit{L’intelligence artificielle en éducation}, Retz.}.
+Grâce aux données collectées, ces plateformes ajustent automatiquement la difficulté des exercices, la fréquence des révisions, et même le type de ressources pédagogiques offertes aux apprenants. Ainsi, un élève en difficulté bénéficiera immédiatement d’exercices de renforcement ciblés, tandis qu’un élève plus performant accédera à des contenus plus complexes pour approfondir ses connaissances. Cette personnalisation directe favorise une mémorisation efficace et durable des savoirs.
 
     \item Rétroaction immédiate :
 Les plateformes intelligentes fournissent également des retours instantanés sur les résultats obtenus par les élèves. Cette rétroaction immédiate permet aux apprenants de rectifier rapidement leurs erreurs et de consolider immédiatement leurs apprentissages, augmentant ainsi leur confiance et leur motivation à apprendre.
 \end{itemize}
 
-Les bénéfices pédagogiques des plateformes éducatives intelligentes sont aujourd’hui clairement établis. Plusieurs études récentes montrent que les élèves utilisant ces plateformes obtiennent des résultats scolaires sensiblement meilleurs, notamment en raison d’une meilleure structuration cognitive des connaissances et d’une réduction notable de la surcharge mentale. Les élèves les plus vulnérables ou présentant des troubles cognitifs spécifiques tirent particulièrement profit de ces approches individualisées, améliorant significativement leur mémorisation et leur réussite scolaire à long terme\footnote{Lebrun, M. (2021). \textit{Classes inversées et pédagogie active}, De Boeck Supérieur.}.
+Les bénéfices pédagogiques des plateformes éducatives intelligentes sont aujourd’hui clairement établis. Plusieurs études récentes montrent que les élèves utilisant ces plateformes obtiennent des résultats scolaires sensiblement meilleurs, notamment en raison d’une meilleure structuration cognitive des connaissances et d’une réduction notable de la surcharge mentale. Les élèves les plus vulnérables ou présentant des troubles cognitifs spécifiques tirent particulièrement profit de ces approches individualisées, améliorant significativement leur mémorisation et leur réussite scolaire à long terme.
 
 En outre, ces plateformes libèrent également les enseignants des tâches répétitives liées à la gestion manuelle des parcours différenciés, leur permettant de mieux concentrer leur énergie pédagogique sur un accompagnement humain plus individualisé et pertinent.
 
@@ -773,7 +773,7 @@ Malgré ces avantages indéniables, les plateformes intelligentes soulèvent né
 L’usage intensif de ces plateformes implique une collecte permanente de données individuelles sensibles, ce qui nécessite des régulations claires et transparentes afin de protéger efficacement la vie privée des utilisateurs.
 
     \item Accessibilité numérique :
-Ces outils supposent généralement un accès à une connexion internet stable et des équipements numériques adéquats, créant ainsi une fracture numérique potentielle entre élèves issus de milieux socio-économiques différents. La réduction de ces inégalités d’accès constitue un défi majeur à relever pour assurer une utilisation réellement inclusive de ces plateformes intelligentes\footnote{Granjon, F. (2021). \textit{Inégalités numériques : accès et usages}, Presses des Mines.}.
+Ces outils supposent généralement un accès à une connexion internet stable et des équipements numériques adéquats, créant ainsi une fracture numérique potentielle entre élèves issus de milieux socio-économiques différents. La réduction de ces inégalités d’accès constitue un défi majeur à relever pour assurer une utilisation réellement inclusive de ces plateformes intelligentes.
 
 \end{itemize}
 
@@ -784,7 +784,7 @@ La personnalisation de l’apprentissage constitue aujourd’hui l’un des prin
 
 La personnalisation adaptative repose sur la capacité des systèmes éducatifs intelligents à proposer des contenus pédagogiques spécifiquement adaptés aux performances, au rythme et aux besoins individuels de chaque apprenant. Ce processus implique une analyse continue des résultats obtenus par l’apprenant, permettant aux algorithmes d’ajuster dynamiquement les contenus proposés en fonction des difficultés rencontrées ou des progrès réalisés.
 
-Par exemple, lorsqu’un élève peine à maîtriser une notion spécifique en mathématiques, l’algorithme détecte automatiquement cette difficulté et propose immédiatement des exercices complémentaires ciblés pour renforcer précisément cette compétence. À l’inverse, lorsqu’un élève démontre une excellente maîtrise d’une compétence donnée, la plateforme adapte automatiquement le parcours en proposant des contenus plus avancés, garantissant ainsi que chaque apprenant reste engagé et motivé tout au long de son apprentissage\footnote{Dessus, P. (2020). \textit{L’intelligence artificielle en éducation}, Retz.}.
+Par exemple, lorsqu’un élève peine à maîtriser une notion spécifique en mathématiques, l’algorithme détecte automatiquement cette difficulté et propose immédiatement des exercices complémentaires ciblés pour renforcer précisément cette compétence. À l’inverse, lorsqu’un élève démontre une excellente maîtrise d’une compétence donnée, la plateforme adapte automatiquement le parcours en proposant des contenus plus avancés, garantissant ainsi que chaque apprenant reste engagé et motivé tout au long de son apprentissage.
 
 La personnalisation de l’apprentissage repose principalement sur trois processus technologiques essentiels :
 
@@ -796,13 +796,13 @@ Le système réalise en continu une évaluation automatisée des compétences et
 En fonction des résultats de l’évaluation diagnostique, l’algorithme ajuste automatiquement le niveau de difficulté des exercices proposés, la fréquence des révisions, et même le format des contenus pédagogiques (vidéos, exercices interactifs, jeux éducatifs, etc.). Cette adaptation permet une meilleure assimilation et mémorisation à long terme des connaissances enseignées.
 
     \item Rétroaction immédiate personnalisée :
-Les plateformes fournissent des retours instantanés spécifiques à chaque élève, lui indiquant clairement ce qu’il maîtrise déjà et ce qu’il doit encore travailler. Cette rétroaction immédiate favorise l’autonomie cognitive et permet aux élèves de mieux réguler leur apprentissage personnel\footnote{Dillenbourg, P. (2018). \textit{L’apprentissage adaptatif dans l’éducation numérique}, PPUR.}.
+Les plateformes fournissent des retours instantanés spécifiques à chaque élève, lui indiquant clairement ce qu’il maîtrise déjà et ce qu’il doit encore travailler. Cette rétroaction immédiate favorise l’autonomie cognitive et permet aux élèves de mieux réguler leur apprentissage personnel\footnote{Talan. 2024. Apprentissage adaptatif et au-delà : comment l'intelligence artificielle façonne l'éducation. \cite{talan}}.
 
 \end{itemize}
 
 Les bénéfices concrets de la personnalisation adaptative sur la mémorisation sont clairement établis par plusieurs études pédagogiques récentes. Premièrement, cette approche réduit significativement la surcharge cognitive, puisque les élèves n’ont pas à traiter simultanément des informations non adaptées à leur niveau réel de compréhension. Ainsi, la mémorisation des contenus est facilitée par une meilleure structuration cognitive des informations proposées.
 
-Deuxièmement, la personnalisation adaptative permet d’améliorer la motivation intrinsèque des apprenants. En effet, les élèves se sentent davantage impliqués dans leur parcours éducatif lorsque les contenus proposés correspondent précisément à leurs capacités individuelles et à leurs besoins réels. Ce sentiment de compétence renforce leur engagement et stimule leur désir d’apprendre, ce qui augmente considérablement leur capacité à retenir durablement les connaissances enseignées\footnote{Lebrun, M. (2021). \textit{Classes inversées et pédagogie active}, De Boeck Supérieur.}.
+Deuxièmement, la personnalisation adaptative permet d’améliorer la motivation intrinsèque des apprenants. En effet, les élèves se sentent davantage impliqués dans leur parcours éducatif lorsque les contenus proposés correspondent précisément à leurs capacités individuelles et à leurs besoins réels. Ce sentiment de compétence renforce leur engagement et stimule leur désir d’apprendre, ce qui augmente considérablement leur capacité à retenir durablement les connaissances enseignées.
 
 Enfin, la personnalisation permet aux élèves en difficulté ou présentant des troubles cognitifs spécifiques (TDAH, dyslexie, troubles attentionnels) de bénéficier d’un soutien adapté très efficace. Les systèmes éducatifs adaptatifs analysent leurs performances en continu, identifient rapidement les difficultés rencontrées, et proposent automatiquement des contenus pédagogiques adaptés à leurs besoins particuliers. Cette approche permet ainsi de réduire considérablement les écarts scolaires et d’améliorer durablement les capacités mnésiques de ces élèves vulnérables.
 
@@ -810,7 +810,7 @@ Malgré ses nombreux avantages, la personnalisation adaptative présente égalem
 
 De plus, cette individualisation poussée pourrait mener à une certaine fragmentation des apprentissages, limitant potentiellement les interactions sociales et collaboratives au sein de la classe, pourtant essentielles au développement social et cognitif des élèves.
 
-Enfin, l’accès à ces technologies reste conditionné à des ressources économiques et technologiques importantes, créant une fracture numérique significative entre les élèves issus de milieux socio-économiques variés. Il devient donc essentiel d’assurer une égalité réelle d’accès à ces outils pédagogiques innovants pour éviter d’accentuer les inégalités scolaires existantes\footnote{Granjon, F. (2021). \textit{Inégalités numériques : accès et usages}, Presses des Mines.}.
+Enfin, l’accès à ces technologies reste conditionné à des ressources économiques et technologiques importantes, créant une fracture numérique significative entre les élèves issus de milieux socio-économiques variés. Il devient donc essentiel d’assurer une égalité réelle d’accès à ces outils pédagogiques innovants pour éviter d’accentuer les inégalités scolaires existantes.
 
 %3.1.3
 \subsection{Suivi et analyse des progrès des apprenants}
@@ -819,7 +819,7 @@ Le suivi précis et l’analyse continue des progrès réalisés par les élève
 
 L’intelligence artificielle offre aujourd’hui des outils sophistiqués permettant de suivre précisément les progrès pédagogiques des apprenants. Ce suivi dépasse largement les évaluations ponctuelles traditionnelles, puisque les algorithmes analysent en continu les performances des élèves sur l’ensemble des activités réalisées. Ainsi, ils fournissent une représentation détaillée et en temps réel des acquis, des lacunes, et du rythme d’apprentissage individuel de chaque élève.
 
-Des plateformes éducatives comme Khan Academy, Coursera ou encore Smart Sparrow, utilisent ces données pour établir des « profils d’apprentissage » complets et personnalisés pour chaque élève. Ces profils regroupent des informations précises sur les compétences maîtrisées, les compétences en cours d’acquisition, et les difficultés récurrentes. Grâce à ces profils détaillés, les enseignants et les élèves disposent d’un aperçu clair et actualisé des progrès réalisés et des objectifs à atteindre\footnote{Dessus, P. (2020). \textit{L’intelligence artificielle en éducation}, Retz.}.
+Des plateformes éducatives comme Khan Academy, Coursera ou encore Smart Sparrow, utilisent ces données pour établir des « profils d’apprentissage » complets et personnalisés pour chaque élève. Ces profils regroupent des informations précises sur les compétences maîtrisées, les compétences en cours d’acquisition, et les difficultés récurrentes. Grâce à ces profils détaillés, les enseignants et les élèves disposent d’un aperçu clair et actualisé des progrès réalisés et des objectifs à atteindre.
 
 Le suivi des progrès pédagogiques s’appuie principalement sur les méthodes d’analyse de données éducatives, appelées « Learning Analytics ». 
 
@@ -830,11 +830,11 @@ Ces méthodes regroupent plusieurs techniques :
 
     \item Analyse prédictive : Les algorithmes d’IA prédisent les résultats scolaires futurs des élèves en fonction des données collectées. Par exemple, en analysant le comportement d’apprentissage de l’élève, les systèmes peuvent anticiper d’éventuelles difficultés futures et proposer préventivement des contenus adaptés.
 
-    \item Analyse prescriptive : Les plateformes éducatives intelligentes recommandent automatiquement des interventions pédagogiques ciblées afin de corriger les difficultés identifiées. Ainsi, les élèves reçoivent des recommandations personnalisées sur les contenus ou les compétences à travailler en priorité, facilitant considérablement la mémorisation efficace des savoirs\footnote{Dillenbourg, P. (2018). \textit{L’apprentissage adaptatif dans l’éducation numérique}, PPUR.}.
+    \item Analyse prescriptive : Les plateformes éducatives intelligentes recommandent automatiquement des interventions pédagogiques ciblées afin de corriger les difficultés identifiées. Ainsi, les élèves reçoivent des recommandations personnalisées sur les contenus ou les compétences à travailler en priorité, facilitant considérablement la mémorisation efficace des savoirs.
 
 \end{itemize}
 
-L’analyse continue des progrès permet une mémorisation plus efficace grâce à une meilleure structuration et organisation des apprentissages. Les élèves reçoivent des retours réguliers et précis sur leurs performances, ce qui renforce leur motivation et leur implication active dans le processus d’apprentissage. De plus, les systèmes éducatifs intelligents peuvent anticiper les difficultés des apprenants, en proposant des activités pédagogiques ciblées avant que ces difficultés ne deviennent trop importantes, renforçant ainsi la rétention mnésique à long terme\footnote{Lebrun, M. (2021). \textit{Classes inversées et pédagogie active}, De Boeck Supérieur.}.
+L’analyse continue des progrès permet une mémorisation plus efficace grâce à une meilleure structuration et organisation des apprentissages. Les élèves reçoivent des retours réguliers et précis sur leurs performances, ce qui renforce leur motivation et leur implication active dans le processus d’apprentissage. De plus, les systèmes éducatifs intelligents peuvent anticiper les difficultés des apprenants, en proposant des activités pédagogiques ciblées avant que ces difficultés ne deviennent trop importantes, renforçant ainsi la rétention mnésique à long terme.
 
 Cette approche proactive est particulièrement bénéfique pour les élèves en difficulté ou présentant des troubles spécifiques de l’apprentissage (TDAH, dyslexie). Le suivi permanent de leur progression leur permet de bénéficier d’un soutien précis, constant, et adapté à leurs besoins individuels, optimisant ainsi leurs chances de réussite éducative.
 
@@ -848,7 +848,7 @@ Bien que le suivi automatisé des progrès offre de nombreux avantages pédagogi
  
 \end{itemize}
 
-Équilibre entre suivi automatisé et accompagnement humain : Une trop forte automatisation du suivi des progrès pourrait réduire les interactions directes entre enseignants et élèves, pourtant essentielles au développement des compétences sociales et émotionnelles. Il est donc crucial de préserver un équilibre entre l’utilisation des technologies intelligentes et l’accompagnement pédagogique humain\footnote{Granjon, F. (2021). \textit{Inégalités numériques : accès et usages}, Presses des Mines.}.
+Équilibre entre suivi automatisé et accompagnement humain : Une trop forte automatisation du suivi des progrès pourrait réduire les interactions directes entre enseignants et élèves, pourtant essentielles au développement des compétences sociales et émotionnelles. Il est donc crucial de préserver un équilibre entre l’utilisation des technologies intelligentes et l’accompagnement pédagogique humain.
 
 Le suivi intelligent des progrès des apprenants constitue sans aucun doute une avancée majeure dans le domaine de l’éducation. Pour maximiser les bénéfices pédagogiques tout en évitant les écueils potentiels, il est essentiel d’adopter une approche équilibrée, combinant judicieusement les avantages technologiques des outils intelligents avec une pédagogie humaine attentive et inclusive.
 
@@ -862,7 +862,7 @@ L’intelligence artificielle représente aujourd’hui une solution technologiq
 
 L’une des applications les plus prometteuses de l’intelligence artificielle auprès des personnes âgées atteintes d’Alzheimer concerne les assistants intelligents spécialisés. Ces dispositifs sont conçus pour compenser les déficits de mémoire en fournissant des rappels personnalisés adaptés aux besoins spécifiques de chaque patient.
 
-Par exemple, des systèmes intelligents comme Alexa Care Hub ou Google Home peuvent rappeler automatiquement aux personnes âgées leurs rendez-vous médicaux, la prise régulière de médicaments, ou encore leurs tâches quotidiennes essentielles (alimentation, hydratation). L’IA ajuste automatiquement ces rappels en fonction du rythme quotidien des patients, tout en tenant compte de leur niveau de déclin cognitif, garantissant ainsi un soutien parfaitement adapté à chaque situation\footnote{Croisile, B. (2019). \textit{Alzheimer et troubles de la mémoire}, Odile Jacob.}.
+Par exemple, des systèmes intelligents comme Alexa Care Hub ou Google Home peuvent rappeler automatiquement aux personnes âgées leurs rendez-vous médicaux, la prise régulière de médicaments, ou encore leurs tâches quotidiennes essentielles (alimentation, hydratation). L’IA ajuste automatiquement ces rappels en fonction du rythme quotidien des patients, tout en tenant compte de leur niveau de déclin cognitif, garantissant ainsi un soutien parfaitement adapté à chaque situation.
 
 De plus, grâce au traitement du langage naturel (NLP), ces assistants peuvent interagir simplement avec les utilisateurs par la voix, ce qui réduit fortement les barrières d’accès technologique pour les personnes âgées peu habituées à l’utilisation d’interfaces numériques complexes.
 
@@ -872,7 +872,7 @@ Par exemple, des systèmes comme les bracelets connectés avec IA, ou les dispos
 
 Les applications thérapeutiques utilisant l’IA offrent également une aide précieuse pour stimuler régulièrement la mémoire des patients atteints de la maladie d’Alzheimer. Ces outils numériques intelligents proposent des exercices cognitifs spécifiquement adaptés à chaque utilisateur selon son stade d’évolution de la maladie.
 
-Par exemple, les applications comme « Stim’Art » ou « Mem-X » utilisent des algorithmes d’apprentissage adaptatif pour personnaliser les exercices cognitifs en fonction des performances individuelles des patients. Ces activités stimulent régulièrement différentes fonctions cognitives (mémoire épisodique, mémoire sémantique, reconnaissance visuelle, attention) et contribuent ainsi à ralentir le déclin cognitif tout en favorisant un maintien durable des capacités mnésiques\footnote{Sablier, J. (2021). \textit{Maladie d’Alzheimer et nouvelles technologies}, Dunod.}.
+Par exemple, les applications comme « Stim’Art » ou « Mem-X » utilisent des algorithmes d’apprentissage adaptatif pour personnaliser les exercices cognitifs en fonction des performances individuelles des patients. Ces activités stimulent régulièrement différentes fonctions cognitives (mémoire épisodique, mémoire sémantique, reconnaissance visuelle, attention) et contribuent ainsi à ralentir le déclin cognitif tout en favorisant un maintien durable des capacités mnésiques.
 
 L’usage concret de ces technologies IA améliore significativement la qualité de vie des personnes atteintes d’Alzheimer. Premièrement, ces outils favorisent une meilleure autonomie quotidienne en réduisant la dépendance constante aux aidants ou aux professionnels de santé. Deuxièmement, ils diminuent également le stress et l’anxiété associés aux oublis quotidiens, tant chez les patients que chez leurs proches.
 
@@ -880,7 +880,7 @@ Par ailleurs, les aidants bénéficient eux-mêmes d’un soutien notable grâce
 
 Malgré ces bénéfices notables, l’utilisation de l’IA auprès des personnes âgées présente également des défis techniques et éthiques à considérer attentivement. Tout d’abord, l’efficacité de ces outils dépend directement de leur simplicité d’usage : des interfaces complexes ou des dispositifs mal adaptés aux capacités cognitives réelles des utilisateurs risquent d’être contre-productifs.
 
-De plus, la question de la protection des données personnelles, notamment les données sensibles liées à la santé et au suivi quotidien des patients, constitue un enjeu majeur. Il est crucial de garantir une transparence totale et une sécurité maximale dans l’utilisation et le stockage de ces informations afin de préserver la dignité et la vie privée des personnes âgées concernées\footnote{Karsenti, T. (2021). \textit{Éthique et numérique éducatif}, PUQ.}.
+De plus, la question de la protection des données personnelles, notamment les données sensibles liées à la santé et au suivi quotidien des patients, constitue un enjeu majeur. Il est crucial de garantir une transparence totale et une sécurité maximale dans l’utilisation et le stockage de ces informations afin de préserver la dignité et la vie privée des personnes âgées concernées\footnote{CNIL 2024, Développement des systèmes d’IA : les recommandations de la CNIL pour respecter le RGPD. \cite{cnil}}.
 
 %3.2.2
 \subsection{Soutien aux personnes atteintes de TDAH ou de dyslexie}
@@ -889,19 +889,19 @@ Les troubles spécifiques de l’apprentissage comme le Trouble du Déficit de l
 
 Les personnes atteintes de TDAH rencontrent souvent des difficultés marquées en matière d’organisation, de planification et de mémorisation. Pour répondre à ces défis spécifiques, plusieurs applications intelligentes exploitent l’intelligence artificielle pour fournir un soutien personnalisé adapté précisément à ces troubles.
 
-Par exemple, des outils tels que Todoist ou Google Keep utilisent des algorithmes intelligents pour proposer automatiquement des rappels contextuels, adaptés au rythme et aux habitudes individuelles des utilisateurs atteints de TDAH. Ces applications permettent ainsi de réduire les oublis fréquents, tout en aidant les utilisateurs à mieux structurer leurs activités quotidiennes, facilitant considérablement leur autonomie et réduisant leur charge mentale\footnote{Mazeau, M. (2021). \textit{Le TDAH chez l'enfant et l'adolescent}, Elsevier Masson.}.
+Par exemple, des outils tels que Todoist ou Google Keep utilisent des algorithmes intelligents pour proposer automatiquement des rappels contextuels, adaptés au rythme et aux habitudes individuelles des utilisateurs atteints de TDAH. Ces applications permettent ainsi de réduire les oublis fréquents, tout en aidant les utilisateurs à mieux structurer leurs activités quotidiennes, facilitant considérablement leur autonomie et réduisant leur charge mentale.
 
 D’autres outils intelligents, comme les assistants vocaux (Siri, Alexa), simplifient également la gestion quotidienne pour les personnes atteintes de TDAH, en permettant une capture rapide des idées ou des tâches à effectuer, sans nécessiter un effort cognitif important lié à l’écriture ou à la saisie manuelle. Cette simplification technologique permet aux utilisateurs de mieux gérer leur attention et leur temps, optimisant ainsi leur mémorisation et leur organisation personnelle.
 
 La dyslexie, trouble spécifique de l’apprentissage caractérisé par des difficultés importantes en lecture et écriture, affecte directement les capacités mnésiques associées aux contenus écrits. L’intelligence artificielle propose plusieurs outils numériques spécifiquement adaptés pour faciliter l’accès et la mémorisation de l’information chez ces personnes.
 
-Des technologies comme la synthèse vocale (Text-to-Speech) intégrée dans des applications telles que Microsoft Immersive Reader ou Google Read Aloud permettent aux personnes dyslexiques d’accéder directement au contenu textuel sous forme orale. Ainsi, la charge cognitive liée à la lecture est significativement réduite, ce qui améliore considérablement la rétention des informations et leur mémorisation à long terme\footnote{Pouhet, A. (2020). \textit{Questions sur les dys : dyslexie, dyspraxie}, Tom Pousse.}.
+Des technologies comme la synthèse vocale (Text-to-Speech) intégrée dans des applications telles que Microsoft Immersive Reader ou Google Read Aloud permettent aux personnes dyslexiques d’accéder directement au contenu textuel sous forme orale. Ainsi, la charge cognitive liée à la lecture est significativement réduite, ce qui améliore considérablement la rétention des informations et leur mémorisation à long terme.
 
 Par ailleurs, les systèmes utilisant la reconnaissance vocale (Speech-to-Text), comme Google Docs Voice Typing ou Dragon Naturally Speaking, facilitent considérablement la production écrite chez les dyslexiques, en contournant les difficultés orthographiques et de structuration de phrases. Ces outils numériques aident les utilisateurs à mieux organiser leurs idées et à mémoriser plus efficacement le contenu de leurs travaux ou apprentissages scolaires.
 
 Les plateformes éducatives intelligentes telles que Khan Academy, Lalilo ou Orthodidacte proposent également des parcours spécifiquement adaptés aux troubles cognitifs tels que le TDAH ou la dyslexie. Ces plateformes utilisent des algorithmes d’apprentissage adaptatif pour proposer des contenus pédagogiques spécialement structurés afin de répondre aux difficultés attentionnelles ou de lecture des élèves concernés.
 
-Par exemple, ces systèmes éducatifs adaptent automatiquement les durées des activités proposées, réduisent les distractions visuelles inutiles, et simplifient les consignes pour maintenir l’attention et l’engagement des élèves présentant ces troubles spécifiques. Cette approche permet non seulement de renforcer la mémorisation efficace des connaissances enseignées, mais aussi d’améliorer la confiance en soi et l’autonomie cognitive de ces apprenants vulnérables\footnote{Dessus, P. (2020). \textit{L’intelligence artificielle en éducation}, Retz.}.
+Par exemple, ces systèmes éducatifs adaptent automatiquement les durées des activités proposées, réduisent les distractions visuelles inutiles, et simplifient les consignes pour maintenir l’attention et l’engagement des élèves présentant ces troubles spécifiques. Cette approche permet non seulement de renforcer la mémorisation efficace des connaissances enseignées, mais aussi d’améliorer la confiance en soi et l’autonomie cognitive de ces apprenants vulnérables.
 
 Malgré leurs avantages, ces outils intelligents présentent également certains défis techniques et éthiques :
 
@@ -914,22 +914,22 @@ La réelle efficacité de ces outils dépend fortement de leur capacité à êtr
 L’accès à ces outils numériques intelligents reste encore inégal, posant la question de leur disponibilité effective pour tous les utilisateurs concernés, notamment dans des contextes économiques défavorisés.
 
     \item Protection des données sensibles :
-L’utilisation intensive de ces technologies implique une collecte permanente de données sensibles sur les performances cognitives des utilisateurs. Il est donc essentiel de garantir la confidentialité et la sécurité absolue de ces informations personnelles\footnote{Karsenti, T. (2021). \textit{Éthique et numérique éducatif}, PUQ.}.
+L’utilisation intensive de ces technologies implique une collecte permanente de données sensibles sur les performances cognitives des utilisateurs. Il est donc essentiel de garantir la confidentialité et la sécurité absolue de ces informations personnelles.
 
 \end{itemize}
 
 %3.2.3
 \subsection{Interfaces cerveau-ordinateur pour compenser les déficiences mnésiques}
 
-Les interfaces cerveau-ordinateur (ICO), connues également sous le nom d’interfaces cerveau-machine, représentent une avancée majeure dans le domaine des technologies intelligentes appliquées à la mémorisation. Ces dispositifs innovants permettent une communication directe entre le cerveau humain et les systèmes numériques, offrant des perspectives inédites pour compenser efficacement les troubles sévères de la mémoire.
+Les interfaces cerveau-ordinateur (ICO), connues également sous le nom d’interfaces cerveau-machine, représentent une avancée majeure dans le domaine des technologies intelligentes appliquées à la mémorisation. Ces dispositifs innovants permettent une communication directe entre le cerveau humain et les systèmes numériques, offrant des perspectives inédites pour compenser efficacement les troubles sévères de la mémoire \footnote{Inserm 2015, Interface cerveau-machine : enjeux scientifiques et médicaux. \cite{inserm4}}.
 
 Une interface cerveau-ordinateur, souvent abrégée ICO (ou BCI en anglais : Brain-Computer Interface), est une technologie innovante permettant une interaction directe entre le cerveau humain et une machine grâce à la mesure et à l’interprétation des signaux cérébraux. Ces systèmes utilisent principalement des électrodes placées sur le cuir chevelu ou implantées directement dans le cerveau pour capter les signaux cérébraux (activité neuronale) et les traduire en commandes compréhensibles par un ordinateur.
 
-Les ICO exploitent des techniques avancées d’intelligence artificielle, notamment le machine learning et le traitement de signaux neuronaux, afin de décoder précisément les intentions ou les pensées de l’utilisateur. Par exemple, une personne atteinte de déficits mnésiques graves pourrait ainsi utiliser une ICO pour rappeler certaines informations essentielles simplement par la pensée, sans devoir recourir à une recherche externe consciente\footnote{Clerc, M. (2021). \textit{Interfaces cerveau-machine : enjeux scientifiques et médicaux}, CNRS Éditions.}.
+Les ICO exploitent des techniques avancées d’intelligence artificielle, notamment le machine learning et le traitement de signaux neuronaux, afin de décoder précisément les intentions ou les pensées de l’utilisateur. Par exemple, une personne atteinte de déficits mnésiques graves pourrait ainsi utiliser une ICO pour rappeler certaines informations essentielles simplement par la pensée, sans devoir recourir à une recherche externe consciente.
 
 Actuellement, les interfaces cerveau-ordinateur sont expérimentées principalement auprès de patients souffrant de troubles neurologiques sévères, tels que la maladie d’Alzheimer avancée, la sclérose en plaques, ou encore des lésions cérébrales traumatiques entraînant des déficits cognitifs graves.
 
-Des expériences cliniques récentes montrent que ces systèmes peuvent être utilisés efficacement pour compenser des déficiences spécifiques de mémoire épisodique ou de mémoire de travail. Par exemple, une ICO pourrait permettre à un patient Alzheimer de rappeler plus facilement certains souvenirs personnels précis en stimulant directement certaines régions cérébrales impliquées dans la récupération mnésique\footnote{Clerc, M. (2021). \textit{Interfaces cerveau-machine : enjeux scientifiques et médicaux}, CNRS Éditions.}.
+Des expériences cliniques récentes montrent que ces systèmes peuvent être utilisés efficacement pour compenser des déficiences spécifiques de mémoire épisodique ou de mémoire de travail. Par exemple, une ICO pourrait permettre à un patient Alzheimer de rappeler plus facilement certains souvenirs personnels précis en stimulant directement certaines régions cérébrales impliquées dans la récupération mnésique.
 
 Ces systèmes intelligents pourraient également aider des patients atteints de troubles sévères de la communication à interagir avec leur environnement en leur permettant de commander par la pensée des dispositifs numériques (ordinateurs, dispositifs domotiques intelligents, etc.). Ce type d’application est extrêmement prometteur pour restaurer l’autonomie cognitive et sociale des personnes les plus touchées.
 
@@ -944,7 +944,7 @@ Grâce à une communication directe cerveau-machine, les utilisateurs souffrant 
 L’utilisation des ICO pourrait permettre une stimulation ciblée, adaptée précisément aux besoins cognitifs de chaque patient, ce qui pourrait ralentir le déclin cognitif ou améliorer significativement la qualité de vie en compensant efficacement certains déficits de mémoire.
 
     \item Réduction de la dépendance aux aidants :
-Ces technologies pourraient diminuer sensiblement la charge pesant sur les aidants familiaux ou professionnels, en offrant aux patients une forme d’assistance autonome efficace au quotidien\footnote{Sablier, J. (2021). \textit{Maladie d’Alzheimer et nouvelles technologies}, Dunod.}.
+Ces technologies pourraient diminuer sensiblement la charge pesant sur les aidants familiaux ou professionnels, en offrant aux patients une forme d’assistance autonome efficace au quotidien.
  
 \end{itemize}
 
@@ -959,7 +959,7 @@ Le décodage précis des intentions et des pensées à partir des signaux céré
 Les interfaces cerveau-ordinateur invasives présentent un risque notable de complications médicales, telles que des infections ou des rejets immunitaires, ce qui limite leur adoption actuelle en dehors des contextes expérimentaux spécialisés.
 
     \item Enjeux éthiques majeurs :
-L’interaction directe cerveau-machine pose des questions éthiques importantes, notamment en ce qui concerne la protection des données cérébrales sensibles, la possibilité de manipulation des intentions, ou encore les limites à respecter dans l’usage clinique ou personnel de ces dispositifs avancés\footnote{Karsenti, T. (2021). \textit{Éthique et numérique éducatif}, PUQ.}.
+L’interaction directe cerveau-machine pose des questions éthiques importantes, notamment en ce qui concerne la protection des données cérébrales sensibles, la possibilité de manipulation des intentions, ou encore les limites à respecter dans l’usage clinique ou personnel de ces dispositifs avancés.
 
 \end{itemize}
 
@@ -1416,6 +1416,22 @@ Ce mémoire constitue donc, pour moi, non seulement une victoire académique mai
     \bibitem{penseeartificielle}
         [/] Pensee Artificielle 2019, Comprendre LSTM et GRU : fonctionnement et schéma. \break
         \url{https://penseeartificielle.fr/comprendre-lstm-gru-fonctionnement-schema/}
+    
+    \bibitem{ibm2}
+        [/] IBM 2024, Qu'est-ce que le filtrage collaboratif ? \break
+        \url{https://www.ibm.com/fr-fr/topics/collaborative-filtering}
+    
+    \bibitem{ibm3}
+        [/] IBM, Qu'est-ce qu'un autoencodeur ? \break
+        \url{https://www.ibm.com/fr-fr/think/topics/autoencoder}
+    
+    \bibitem{unesco}
+        [/] UNESCO 2023, L'intelligence artificielle et l'éducation : vers une approche éthique et inclusive. \break
+        \url{https://unesdoc.unesco.org/ark:/48223/pf0000381780}
+    
+    \bibitem{inserm4}
+        [/] Inserm 2015, Interface cerveau-machine : enjeux scientifiques et médicaux. \break
+        \url{https://www.inserm.fr/dossier/interface-cerveau-machine-icm/}
 
     \bibitem{dr_calon}
         Dr. Calon. Maladie d'Alzheimer : causes, symptômes et traitements. \break
