@@ -262,21 +262,25 @@ Enfin, je tiens à remercier tout particulièrement ma famille, pour leur soutie
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 
-La mémoire, dans sa fonction première, n’est pas seulement une capacité biologique ou un processus cognitif parmi d’autres ; elle constitue le socle même de notre identité, de notre rapport au temps, de notre capacité à apprendre, à transmettre, à nous projeter. Mémoriser, c’est inscrire, c’est organiser, c’est relier ; c’est surtout ne pas oublier ce qui nous fonde. Et pourtant, dans nos sociétés contemporaines saturées d’informations, de sollicitations et de médiations numériques, cette fonction essentielle semble constamment mise à l’épreuve, fragmentée, externalisée. Dans ce contexte, une question se pose avec une acuité nouvelle : et si l’intelligence artificielle pouvait nous aider à mieux mémoriser ?
+La mémoire humaine est un pilier central de notre fonctionnement cognitif. Elle conditionne notre capacité à apprendre, à nous adapter, à prendre des décisions ou à agir en fonction de notre passé. Pourtant, malgré son rôle fondamental, elle reste fragile, sujette à l’oubli, à la surcharge, aux biais ou encore aux effets du vieillissement. Dans un monde où les flux d’informations sont constants et où l’environnement numérique sollicite notre attention en permanence, ces fragilités deviennent plus visibles. La mémoire peine parfois à suivre, ce qui entraîne des difficultés de concentration, des pertes d’informations essentielles ou une sensation générale de saturation cognitive (Sweller, 2022 \cite{sweller} ; Laurence, 2012 \cite{taconnat}).
 
-Cette interrogation n’est pas anodine. Elle touche à la rencontre entre deux systèmes : d’un côté, la mémoire humaine, avec ses forces – plasticité, profondeur, association symbolique – et ses fragilités – oubli, surcharge, biais ; de l’autre, la mémoire artificielle, conçue par l’homme, structurée en données, organisée par des algorithmes d’apprentissage. À travers cette rencontre, c’est toute une redéfinition du rapport entre humain et machine qui s’esquisse, non plus sur le mode de la substitution ou de la compétition, mais sur celui du partenariat cognitif.
+Mon intérêt pour cette problématique ne repose pas uniquement sur un constat académique ou scientifique. Il est aussi profondément personnel. Depuis plusieurs années, je suis confronté à un trouble de l’attention (TDA), qui perturbe mon rapport à l’apprentissage, à l’organisation mentale et à la mémorisation. Cette condition m’oblige à rechercher constamment des stratégies pour retenir les informations, structurer mes idées et maintenir une attention soutenue. À cela s’ajoute une dimension familiale : j’ai été témoin des effets dévastateurs de la maladie d’Alzheimer sur un proche, et j’ai vu combien la perte progressive de mémoire affecte non seulement les capacités cognitives, mais aussi l’autonomie et la dignité. Ces expériences m’ont amené à m’interroger sur les possibilités offertes par les technologies intelligentes pour accompagner les personnes confrontées à ce type de difficulté, sans pour autant se substituer à elles.
 
-Mon ambition dans ce mémoire a été de prendre cette question à bras-le-corps, en articulant une triple démarche : d’abord comprendre la mémoire humaine, dans sa structure, ses mécanismes et ses troubles ; ensuite analyser les apports réels et potentiels de l’intelligence artificielle dans le domaine cognitif, à travers les techniques du traitement automatique du langage, de l’apprentissage séquentiel, et des architectures de type LSTM ou GRU ; enfin, concevoir un système technique complet, capable de simuler des rappels intelligents, de prédire les oublis, et de proposer des modalités d’interaction adaptées aux utilisateurs.
+Dans ce mémoire, j’ai cherché à comprendre dans quelle mesure l’intelligence artificielle, en tant que technologie adaptative et contextuelle, pouvait renforcer les capacités de mémorisation humaine. Ce questionnement s’inscrit dans une démarche interdisciplinaire, mêlant neurosciences, informatique, ingénierie pédagogique et sciences cognitives. Il s’agit d’évaluer le potentiel des systèmes intelligents pour offrir un soutien individualisé à la mémoire, à travers des rappels personnalisés, des interfaces intelligentes et des algorithmes capables d’apprendre à partir des comportements de l’utilisateur.
 
-Pour cela, j’ai croisé des approches issues des sciences cognitives, de la psychologie, de l’informatique et de l’ingénierie pédagogique. J’ai voulu construire un pont entre théorie et pratique, entre modélisation et expérimentation, entre réflexion critique et développement applicatif. Le cœur de ce travail repose sur une conviction forte : la technologie ne doit pas s’imposer comme une norme, mais s’adapter aux rythmes, aux besoins, aux fragilités et aux styles d’apprentissage de chacun.
+D’un point de vue technique, l’intelligence artificielle offre des modèles particulièrement intéressants pour ce type de problématique. Les réseaux de neurones récurrents, notamment les LSTM (Long Short-Term Memory) et les GRU (Gated Recurrent Units), sont capables de traiter des séquences temporelles de données, et donc de simuler des logiques de rappel et d’oubli (France Stratégie, 2018 \cite{francestrategie}). Ces modèles ont été largement utilisés dans des domaines comme la reconnaissance vocale, la traduction automatique ou encore la prédiction de séries temporelles, mais leur application dans le domaine de la mémoire humaine reste encore peu explorée. L’enjeu est ici d’adapter ces architectures à des usages cognitifs, en tenant compte des contraintes pédagogiques, des spécificités individuelles et des risques de dépendance technologique.
 
-Le choix d’un cadre centré sur la personnalisation cognitive, l’inclusion neurodiverse et l’éthique algorithmique m’a conduit à accorder une attention particulière à la diversité des publics concernés : élèves en difficulté scolaire, étudiants en surcharge informationnelle, personnes atteintes de troubles de la mémoire, apprenants neuroatypiques ou adultes en reconversion. Dans chacun de ces contextes, la mémoire n’est pas simplement un outil, mais un enjeu existentiel et un levier de transformation.
+La problématique centrale de ce mémoire peut être formulée ainsi : Dans quelle mesure l’intelligence artificielle peut-elle renforcer les capacités de mémorisation humaine tout en préservant l’autonomie cognitive et en évitant les dérives technologiques ? Il ne s’agit pas seulement de construire un outil performant, mais de réfléchir aux conditions d’un usage responsable, éthique et réellement utile pour les utilisateurs. L’objectif est de proposer une IA qui accompagne la mémoire sans l’effacer, qui soutient sans dominer, qui s’ajuste sans standardiser.
 
-La problématique qui guide ce mémoire peut donc se formuler ainsi : Comment l’intelligence artificielle peut-elle améliorer l’assistance à la mémorisation et l’accessibilité cognitive, tout en respectant les singularités humaines et les exigences éthiques ? Pour y répondre, j’ai structuré mon travail en quatre parties complémentaires.
+Pour traiter cette problématique, j’ai structuré ce travail en quatre grandes parties. La première est consacrée à l’analyse des mécanismes fondamentaux de la mémoire humaine. J’y aborde ses différentes formes (sensorielle, court terme, long terme), les facteurs qui influencent son efficacité (émotions, attention, stress), ainsi que les troubles les plus fréquents (vieillissement cognitif, TDAH, dyslexie), en m’appuyant sur des références comme Eustache (2019) \cite{inserm}, Maheu \& Lupien (2003) \cite{maheulupienn} ou Lexidys (2020) \cite{lexidys}. Je présente aussi les méthodes classiques d’aide à la mémorisation, comme la répétition espacée (Ebbinghaus, 1885) ou la méthode des loci (Psychomédia, 2017 \cite{psychomédia}).
 
-La première est consacrée à l’étude approfondie des mécanismes de la mémoire humaine, de ses vulnérabilités et des stratégies traditionnelles d’aide à la mémorisation. La deuxième explore les fondements et les applications actuelles de l’intelligence artificielle dans le domaine de la cognition, en s’attardant sur les outils déjà en usage et leurs logiques internes. La troisième partie constitue le noyau technique du mémoire : j’y développe la conception d’un assistant intelligent de mémorisation, depuis le choix des technologies jusqu’aux scénarios d’utilisation. Enfin, la quatrième partie élargit la réflexion aux contextes d’usage, aux impacts sociaux, aux enjeux éthiques et aux conditions d’un usage responsable de l’intelligence artificielle cognitive.
+La deuxième partie introduit les bases de l’intelligence artificielle et ses applications dans le domaine de la cognition. J’y explique la distinction entre IA faible et IA forte (CSE Québec, 2020 \cite{hypotheses}), les principes de l’apprentissage supervisé, les techniques de traitement automatique du langage (NLP) et les architectures neuronales pertinentes pour modéliser des processus temporels. Cette partie vise à poser les fondements techniques nécessaires à la compréhension du système que j’ai conçu.
 
-En choisissant de mener ce travail à la première personne, j’ai voulu affirmer que la recherche, même technique, reste une démarche incarnée, traversée par des choix, des valeurs, des intuitions et des questionnements personnels. Ce mémoire est à la fois une contribution théorique, un essai de modélisation, et un manifeste pour une technologie pédagogique qui respecte la complexité du sujet humain.
+La troisième partie est centrée sur le développement d’un assistant intelligent de mémorisation. J’y décris les choix technologiques (LSTM, GRU, NLP), la méthodologie adoptée pour l’entraînement des modèles, les scénarios d’usage envisagés et les résultats obtenus lors des tests. Je présente également les limites rencontrées, les ajustements réalisés et les perspectives d’amélioration possibles, notamment en termes de personnalisation cognitive et d’ergonomie.
+
+Enfin, la quatrième partie élargit la réflexion aux contextes d’usage (éducation, formation continue, rééducation cognitive), aux enjeux d’accessibilité pour les publics neuroatypiques, et aux risques liés à une délégation excessive des fonctions mnésiques à la machine. J’y mobilise les travaux de Talan (2024) \cite{talan} sur les inégalités numériques, ainsi que ceux du CSE Québec (2020) \cite{hypotheses} sur l’impact de l’IA en éducation. Cette partie permet de replacer l’innovation technique dans un cadre plus large, incluant des considérations sociales, pédagogiques et éthiques.
+
+Ce mémoire n’a pas pour but de proposer une solution définitive à la question de l’assistance à la mémorisation. Il vise plutôt à ouvrir une voie, à expérimenter une approche, à tester une hypothèse. Il s’inscrit dans une logique d’innovation raisonnée, où la technique n’est jamais une fin en soi, mais un outil au service de l’humain. À travers ce travail, j’ai souhaité conjuguer rigueur scientifique, développement technique et engagement personnel, afin de proposer une contribution utile à la réflexion sur les interactions entre intelligence artificielle et cognition humaine.
 
 %1
 \chapter{Comprendre la mémoire humaine et ses vulnérabilités}
@@ -301,12 +305,17 @@ Je conclus cette section avec la mémoire à long terme, qui permet de conserver
 
 Enfin, je souligne que l’ensemble de ces processus repose sur un phénomène biologique fondamental qu’est la plasticité neuronale, qui désigne la faculté du cerveau à réorganiser ses circuits internes, à créer de nouvelles connexions et à renforcer celles déjà existantes, notamment à la suite d’un apprentissage ou d’une expérience répétée, même si cette capacité tend à diminuer naturellement avec l’âge. 
 
-\vspace{0.5cm}
-
 %1.1.2
 \subsection{Facteurs influençant la mémorisation}
 
 Lorsque je cherche à comprendre pourquoi certaines informations s’ancrent solidement dans la mémoire alors que d’autres s’effacent rapidement, je dois prendre en compte un ensemble de facteurs internes et externes qui influencent l’efficacité du processus mnésique à différentes étapes, depuis l’encodage initial jusqu’à la récupération finale.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/1.1.2.png}
+    \caption{Facteurs influençant la mémorisation}
+    \label{fig:1.1.2}
+\end{figure}
 
 Je considère d’abord que l’attention constitue la porte d’entrée indispensable à tout processus de mémorisation, puisque seule une information à laquelle j’ai prêté une attention soutenue a une chance d’être traitée en profondeur et intégrée durablement. Lorsque mon attention est concentrée, les réseaux neuronaux impliqués dans l’encodage sont pleinement mobilisés, ce qui facilite la création de traces mnésiques solides. En revanche, si mon attention est dispersée ou superficielle, comme c’est souvent le cas dans les environnements multitâches ou chargés cognitivement, les informations perçues risquent de ne pas dépasser le stade de la mémoire de travail, et seront rapidement perdues.\footnote{Laurence, T. (2012). Fonctionnement et dysfonctionnement de la mémoire. \cite{taconnat}}.
 
@@ -325,8 +334,8 @@ Afin de saisir pleinement le fonctionnement de la mémoire humaine, je m’attar
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{images/1.1.3.png}
-    \caption{Les processus de la mémoire : encodage, stockage, récupération}
+    \includegraphics[width=0.7\textwidth]{images/1.1.3.jpg}
+    \caption{Processus d’encodage, de stockage et de récupération}
     \label{fig:1.1.3}
 \end{figure}
 
@@ -349,7 +358,7 @@ Lorsque je m’interroge sur l’évolution des capacités mnésiques au cours d
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{images/1.2.1.png}
-    \caption{Impact du vieillissement cognitif sur les différents types de mémoire}
+    \caption{Schéma comparatif montrant l’impact du vieillissement normal et celui d’une pathologie}
     \label{fig:1.2.1}
 \end{figure}
 
@@ -367,7 +376,7 @@ Lorsque je m’intéresse aux troubles qui perturbent les mécanismes mnésiques
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{images/1.2.2.png}
-    \caption{Comparaison des fonctions cognitives chez profils neurotypiques, TDAH et dyslexiques}
+    \caption{Un graphique synthétique comparant les fonctions cognitives chez un profil neurotypique vs un profil TDAH ou dyslexique.}
     \label{fig:1.2.2}
 \end{figure}
 
@@ -386,8 +395,8 @@ Lorsque j’analyse les raisons pour lesquelles certaines informations ne parvie
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{images/1.2.3.png}
-    \caption{Effet de la surcharge cognitive sur la performance}
+    \includegraphics[width=0.7\textwidth]{images/1.2.3_2.png}
+    \caption{Un schéma mettant en évidence l’effet d’une surcharge cognitive}
     \label{fig:1.2.3}
 \end{figure}
 
@@ -412,7 +421,7 @@ Lorsque je cherche à améliorer ma capacité de mémorisation, je me tourne d�
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{images/1.3.1.png}
-    \caption{Répartition des techniques de mémorisation classiques}
+    \caption{Un diagramme montrant plusieurs techniques classiques}
     \label{fig:1.3.1}
 \end{figure}
 
@@ -432,7 +441,7 @@ Lorsque je réfléchis à l’évolution des méthodes de mémorisation dans les
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{images/1.3.2.png}
-    \caption{Comparaison des outils numériques de mémorisation}
+    \caption{Un tableau comparatif des outils ou applis existants}
     \label{fig:1.3.2}
 \end{figure}
 
@@ -454,7 +463,7 @@ Lorsque j’évalue l’efficacité des outils que j’utilise pour soutenir ma 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{images/1.3.3.png}
-    \caption{Limites des approches traditionnelles vs IA cognitive}
+    \caption{un diagramme de Venn mettant en évidence les limites communes et spécifiques des méthodes traditionnelles vs méthodes numériques.}
     \label{fig:1.3.3}
 \end{figure}
 
@@ -481,9 +490,9 @@ Lorsque je cherche à définir ce que recouvre précisément le terme d’intell
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{images/2.1.1_2.png}
-    \caption{Schéma d’intelligence artificielle}
-    \label{fig:2.1.1_2}
+    \includegraphics[width=0.7\textwidth]{images/2.1.1.png}
+    \caption{Un schéma global illustrant comment l’IA traite l’information (entrée → algorithmes → sortie).}
+    \label{fig:2.1.1}
 \end{figure}
 
 Je retiens que le fonctionnement de l’IA repose essentiellement sur trois piliers : les données, les modèles d’apprentissage et la capacité d’ajustement autonome. À partir de jeux de données volumineux et représentatifs, les systèmes d’IA construisent des modèles prédictifs ou classificatoires, souvent par le biais d’algorithmes d’apprentissage automatique, ou machine learning, qui leur permettent d’ajuster leurs paramètres internes en fonction des résultats obtenus. Ce processus, que je compare volontiers à une forme d’entraînement, consiste à minimiser les erreurs entre les prédictions du système et les résultats attendus, afin d’optimiser progressivement la performance. Les systèmes dits d’apprentissage profond, ou deep learning, franchissent une étape supplémentaire, en structurant les modèles sous forme de réseaux de neurones artificiels multicouches, capables d’extraire des représentations hiérarchiques et abstraites à partir des données brutes, comme l’expliquent clairement les auteurs du rapport de France Stratégie (2018)\footnote{France Stratégie 2018, Intelligence artificielle et travail : enjeux et perspectives. \cite{francestrategie}}.
@@ -500,9 +509,9 @@ Lorsque j’aborde les différentes formes que peut prendre l’intelligence art
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{images/2.1.1.png}
-    \caption{Schéma des catégories d’intelligence artificielle}
-    \label{fig:2.1.1}
+    \includegraphics[width=0.7\textwidth]{images/2.1.2.png}
+    \caption{Schéma des catégories d’intelligence artificielle, illustrant la distinction entre IA faible et IA forte}
+    \label{fig:2.1.2}
 \end{figure}
 
 L’intelligence artificielle faible, parfois appelée IA étroite ou spécialisée, se caractérise par sa capacité à exécuter une tâche bien définie dans un domaine limité, sans aucune compréhension globale ni autonomie intellectuelle. Je constate que cette forme d’IA repose sur des algorithmes d’apprentissage automatique ou de traitement symbolique, qui exploitent des bases de données massives pour optimiser une fonction précise, comme reconnaître des visages, recommander des contenus, corriger un texte ou détecter des anomalies dans des données. Ces systèmes, bien qu’efficaces, ne sortent jamais du cadre pour lequel ils ont été conçus, et ils ne possèdent aucune intentionnalité propre. Ils apprennent par corrélation, mais ne construisent pas de représentations du monde comparables à celles que je peux élaborer en tant qu’être humain. Je les utilise quotidiennement dans des domaines aussi variés que la traduction, la navigation, l’analyse de texte ou la médecine prédictive, et je mesure à quel point leur efficacité repose sur une spécialisation extrême.
@@ -521,7 +530,7 @@ Lorsque je cherche à comprendre comment les systèmes d’intelligence artifici
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{images/2.1.3.png}
-    \caption{Schéma d'un réseaux de neurones}
+    \caption{Un diagramme stylisé d’un réseau de neurones (couches d’entrée, couches cachées, couche de sortie)}
     \label{fig:2.1.3}
 \end{figure}
 
@@ -542,6 +551,13 @@ En comprenant le fonctionnement des réseaux de neurones et des algorithmes d’
 \subsection{Outils d’aide à la mémorisation basés sur l’IA}
 
 Lorsque j’explore les applications concrètes de l’intelligence artificielle dans le domaine de la mémorisation, je découvre un ensemble d’outils numériques qui s’appuient sur des algorithmes d’apprentissage automatique pour adapter le contenu, le rythme et la forme des révisions à mes besoins cognitifs spécifiques. Ces dispositifs, qu’ils prennent la forme d’applications éducatives, de plateformes en ligne ou d’assistants personnalisés, utilisent des données issues de mon comportement d’apprentissage pour affiner en temps réel leur fonctionnement et améliorer ma rétention à long terme.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/2.2.1.png}
+    \caption{Un schéma d’écosystème IA des outils actuels.}
+    \label{fig:2.2.1}
+\end{figure}
 
 Parmi les solutions les plus emblématiques, je retiens les systèmes qui intègrent la répétition espacée algorithmique, comme Anki, SuperMemo ou encore les modules intelligents de Quizlet, qui analysent mes réussites, mes oublis et mes temps de réponse pour programmer mes révisions selon des intervalles optimaux. Ces outils, en appliquant de manière rigoureuse les principes issus des travaux d’Ebbinghaus sur la courbe de l’oubli, m’évitent de consacrer du temps à revoir des notions déjà bien consolidées, et concentrent au contraire mes efforts sur les connaissances fragiles ou récentes. Le CSE Québec (2020)\footnote{CSE Quebec 2020, L’intelligence artificielle en éducation \cite{hypotheses}} met en avant ce type d’approche comme l’une des formes les plus efficaces d’optimisation de l’apprentissage assisté par IA, notamment parce qu’elle permet de personnaliser l’expérience éducative à grande échelle.
 
@@ -568,6 +584,14 @@ Malgré ces précautions, je considère que les interfaces conversationnelles et
 \subsection{Réduction de la charge mentale}
 
 Lorsque j’explore les innovations les plus récentes en matière de technologies éducatives, je constate que les dispositifs immersifs, comme la réalité virtuelle et la réalité augmentée, ainsi que les interfaces adaptatives, constituent des solutions prometteuses pour enrichir mes capacités de mémorisation en mobilisant simultanément mes sens, mes émotions et mon attention dans un environnement dynamique et engageant.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/2.png}
+    \caption{Un schéma de comparaison entre mémoire humaine et mémoire assistée par IA}
+    \label{fig:2.2.3}
+\end{figure}
+
 
 En expérimentant un environnement immersif, je me trouve plongé dans une simulation interactive où je peux manipuler des objets, interagir avec des éléments visuels et auditifs, et vivre des expériences proches du réel, sans les contraintes physiques ou les risques associés. Cette immersion sensorielle, en stimulant l’engagement émotionnel et corporel, renforce l’ancrage mnésique des contenus que je traite, car elle mobilise plusieurs modalités d’encodage de manière synchronisée. Le rapport de Startum (2023) met justement en lumière la capacité de la réalité virtuelle à activer des circuits cognitifs profonds, notamment dans l’apprentissage procédural ou contextuel, et à créer des souvenirs durables par la simulation d’expériences concrètes, que je n’aurais pas pu vivre dans un cadre classique.
 
@@ -632,6 +656,13 @@ En définitive, je considère que la personnalisation permise par l’intelligen
 
 Lorsque je cherche à concevoir un système intelligent capable d’assister efficacement l’utilisateur dans ses efforts de mémorisation, je me rends rapidement compte que la compréhension, l’analyse et la transformation du langage naturel constituent une étape centrale du processus. En effet, si je souhaite que l’intelligence artificielle identifie les points clés d’un texte, reformule des notions complexes, ou génère des questions pour aider à la rétention, elle doit être en mesure de traiter le langage humain sous toutes ses dimensions : syntaxiques, sémantiques, contextuelles et pragmatiques.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/3.1.1.png}
+    \caption{Un schéma d’architecture NLP montrant comment le texte passe à travers les différentes couches (tokenisation, embeddings, réseau neurone, sortie).}
+    \label{fig:3.1.1}
+\end{figure}
+
 Le traitement automatique du langage naturel, que je désigne par le sigle NLP (Natural Language Processing), regroupe un ensemble de techniques algorithmiques visant à permettre à une machine de manipuler et de produire du texte de manière intelligible. Ces techniques incluent notamment l’analyse morphologique, la reconnaissance d’entités nommées, la vectorisation sémantique ou encore la génération de texte. À travers le NLP, je peux transformer un document brut en une séquence d’unités exploitables par un modèle d’apprentissage automatique, tout en conservant la richesse et la structure du langage naturel.
 
 Je m’appuie dans cette perspective sur des outils de prétraitement tels que la tokenisation, qui consiste à segmenter le texte en unités lexicales pertinentes, le lemmatisation, qui réduit chaque mot à sa forme canonique, et la vectorisation, qui convertit les mots en vecteurs numériques capables de représenter leurs relations sémantiques dans un espace multidimensionnel. Parmi les méthodes de vectorisation, je retiens l’usage de word embeddings comme Word2Vec ou GloVe, qui permettent de capturer les similarités de sens entre mots, et les techniques plus récentes comme BERT, qui tiennent compte du contexte bidirectionnel d’un mot dans une phrase, renforçant ainsi la précision des représentations sémantiques.
@@ -644,6 +675,13 @@ Je considère que ce recours au traitement du langage naturel ne se limite pas �
 \subsection{Justification du choix des réseaux LSTM et GRU}
 
 Lorsque je cherche à concevoir un système intelligent capable de modéliser des séquences de texte à des fins de mémorisation, je me rends vite compte que l’un des défis majeurs réside dans la capacité du modèle à prendre en compte la temporalité, la dépendance entre les éléments d’une séquence, et la récurrence des informations. Un simple réseau de neurones artificiels traditionnel, bien qu’efficace pour les tâches de classification statique, ne suffit pas à capter la dynamique du langage naturel, où chaque mot dépend du contexte dans lequel il est inséré, parfois plusieurs phrases auparavant. C’est pourquoi je choisis de me tourner vers les réseaux neuronaux récurrents, ou RNN, qui sont conçus pour traiter les données séquentielles en conservant une mémoire des états précédents.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/3.1.2.png}
+    \caption{Un mini-diagramme expliquant la logique d’un LSTM ou d’un GRU (portes, mémoire interne, etc.).}
+    \label{fig:3.1.2}
+\end{figure}
 
 Cependant, les RNN classiques présentent des limitations structurelles importantes, notamment lorsqu’il s’agit de traiter des séquences longues. En pratique, je constate que ces modèles souffrent de ce que l’on appelle le problème du gradient qui disparaît ou explose, rendant l’apprentissage instable ou inefficace lorsque les dépendances temporelles dépassent quelques unités. Pour remédier à cette difficulté, je choisis d’utiliser des architectures de réseaux récurrents améliorées, en particulier les réseaux LSTM (Long Short-Term Memory) et GRU (Gated Recurrent Unit), qui ont été spécifiquement conçus pour maintenir l’information sur de longues séquences et mieux réguler le flux d’apprentissage.
 
@@ -662,6 +700,13 @@ Je considère ainsi que l’intégration de réseaux LSTM ou GRU constitue une b
 \subsection{Préparation des données et stratégie d’entraînement du modèle}
 
 Avant de pouvoir entraîner un modèle de réseau LSTM ou GRU dans le but de concevoir un système intelligent d’aide à la mémorisation, je dois porter une attention rigoureuse à la préparation des données textuelles qui vont nourrir ce modèle. En effet, la qualité et la structuration des données d’entrée constituent la fondation sur laquelle repose l’apprentissage, car un algorithme, aussi performant soit-il, ne pourra produire des résultats pertinents que s’il est exposé à des séquences cohérentes, représentatives et nettoyées.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/3.2.1.png}
+    \caption{Un workflow de la phase d’entraînement}
+    \label{fig:3.2.1}
+\end{figure}
 
 Je commence par sélectionner un corpus textuel adapté à la tâche visée, c’est-à-dire un ensemble de contenus dans lequel les mécanismes de mémorisation peuvent s’appliquer de manière concrète. Ce corpus peut inclure des extraits pédagogiques, des définitions, des résumés de chapitres, des flashcards ou encore des dialogues de questions-réponses. Je veille à ce que les textes couvrent différents niveaux de difficulté, divers styles rédactionnels et une variété suffisante de sujets, afin de permettre au modèle d’apprendre à généraliser les stratégies d’encodage et de rappel dans différents contextes d’apprentissage.
 
@@ -842,21 +887,19 @@ En réunissant ces conditions – accompagnement humain, transparence fonctionne
 \chapter*{Conclusion}
 \addcontentsline{toc}{chapter}{Conclusion}
 
-Ce mémoire est né d’une intuition forte : l’idée que la mémoire humaine, dans sa richesse et sa complexité, pouvait trouver en l’intelligence artificielle non pas un substitut, mais un partenaire, un catalyseur, un miroir technique des dynamiques internes qui régissent l’apprentissage, l’oubli, la consolidation et le rappel. À l’heure où les technologies numériques bouleversent nos rapports au savoir, à l’attention et à la connaissance de soi, j’ai voulu poser la question suivante : Comment l’intelligence artificielle peut-elle améliorer l’assistance à la mémorisation et l’accessibilité cognitive ?
+Ce mémoire a été l’occasion d’explorer en profondeur la question du renforcement de la mémoire humaine à travers les outils de l’intelligence artificielle. Mon point de départ reposait sur une double observation : d’un côté, les limites naturelles du système mnésique humain, souvent mises à l’épreuve dans des contextes d’apprentissage intensifs, de surcharge cognitive ou de pathologies neurocognitives ; de l’autre, la montée en puissance des technologies intelligentes capables d’analyser, de prédire, et d’adapter des interactions complexes à des profils individuels. Entre ces deux constats s’est imposée une problématique centrale : Dans quelle mesure l’intelligence artificielle peut-elle renforcer les capacités de mémorisation humaine tout en préservant l’autonomie cognitive et en évitant les dérives technologiques ?
 
-Cette interrogation m’a conduit à explorer une pluralité de domaines – les sciences cognitives, les neurosciences, l’intelligence artificielle, la pédagogie numérique et la philosophie de la technologie – avec l’ambition de produire une réflexion articulée, rigoureuse et orientée vers la conception d’un dispositif concret.
+La réponse à cette question a nécessité une approche à la fois analytique, technique et critique. Dans un premier temps, j’ai analysé les mécanismes cognitifs de la mémoire humaine. J’ai étudié ses différentes formes – sensorielle, de travail, à long terme – ainsi que les étapes fondamentales qui permettent de passer d’une perception à un souvenir stable : encodage, consolidation et récupération (David, 2012 \cite{clarys} ; Eustache, 2019 \cite{inserm}). J’ai également mis en évidence les facteurs qui influencent ces processus, comme l’attention, l’émotion, le stress ou l’âge (Maheu \& Lupien, 2003 \cite{maheulupienn}). Enfin, j’ai abordé les troubles mnésiques associés à certaines pathologies, notamment le TDAH, la dyslexie, ou les maladies neurodégénératives (Lexidys, 2020 \cite{lexidys} ; Inserm, 2022 \cite{inserm2}), afin de comprendre les profils cognitifs les plus vulnérables à l’oubli et à la désorganisation mentale.
 
-Dans un premier temps, j’ai pris le soin de revenir aux fondements cognitifs de la mémoire humaine. J’ai étudié ses mécanismes internes – encodage, stockage, récupération –, ses différentes formes – mémoire à court terme, à long terme, procédurale, sémantique, épisodique –, ainsi que les troubles qui peuvent l’affecter, qu’ils soient pathologiques ou contextuels. Ce détour par les bases neuropsychologiques m’a permis de poser les repères nécessaires à une réflexion sur l’assistance : on n’assiste bien que ce que l’on comprend profondément. J’ai également interrogé les stratégies traditionnelles de renforcement mnésique, des plus anciennes aux plus modernes, pour en cerner les points forts et les limites.
+Dans un second temps, j’ai approfondi les fondements techniques de l’intelligence artificielle, en particulier les méthodes d’apprentissage automatique capables de traiter des données séquentielles. Les réseaux de neurones récurrents de type LSTM ou GRU se sont imposés comme des architectures pertinentes pour simuler des logiques d’oubli et de rappel dans un cadre temporel (France Stratégie, 2018 \cite{francestrategie} ; Octo Technology, 2019 \cite{octo}). J’ai mobilisé également des outils issus du traitement automatique du langage naturel (NLP), qui permettent d’analyser le contenu linguistique produit par l’utilisateur et d’en extraire des structures sémantiques utiles à la personnalisation des rappels.
 
-Dans un second temps, j’ai approfondi les principes et les applications de l’intelligence artificielle. J’ai distingué les IA faibles, déjà opérationnelles, des IA fortes encore hypothétiques. J’ai analysé le fonctionnement de l’apprentissage automatique, et plus précisément celui des réseaux de neurones récurrents comme les LSTM et GRU, particulièrement adaptés au traitement des séquences linguistiques et temporelles. J’ai montré que ces technologies, combinées aux techniques de traitement automatique du langage (NLP), pouvaient offrir des outils pertinents pour détecter les oublis, générer des rappels, reformuler des contenus et accompagner l’apprentissage de manière plus ciblée et personnalisée.
+Sur cette base, j’ai conçu et expérimenté un assistant intelligent de mémorisation, pensé comme un système adaptatif et respectueux du rythme de l’utilisateur. Ce prototype repose sur une logique de personnalisation : il analyse les contenus oubliés, ajuste les fréquences de rappel, propose des rappels contextuels, et adapte son comportement en fonction des réponses observées. Cette démarche a nécessité un travail technique exigeant : préparation des données, choix des modèles, réglage des hyperparamètres, implémentation de scénarios utilisateurs et évaluation des performances. J’ai été confronté à des difficultés concrètes, comme la gestion de l’oubli catastrophique dans les réseaux récurrents, la sous-représentation de certains types d’erreurs dans les jeux de données, ou encore les limites de généralisation du modèle. Ces contraintes m’ont obligé à adopter une démarche rigoureuse, mais aussi créative, en intégrant des solutions hybrides, combinant apprentissage supervisé et règles heuristiques.
 
-Dans une troisième partie, j’ai franchi un seuil méthodologique en proposant un véritable prototype conceptuel d’un système intelligent d’assistance à la mémorisation. J’y ai décrit le choix des outils, la préparation des données, la modélisation des rappels, la gestion des interactions avec l’utilisateur, ainsi que les critères d’évaluation et les ajustements techniques nécessaires pour parvenir à un fonctionnement cohérent. Ce travail ne se limite pas à une simulation abstraite ; il vise à démontrer qu’il est possible, aujourd’hui, de concevoir des dispositifs capables d’anticiper l’oubli, de s’adapter aux rythmes cognitifs individuels, et de proposer une expérience d’apprentissage enrichie, soutenue par la puissance des réseaux neuronaux séquentiels.
+L’un des apports majeurs de ce mémoire réside dans l’articulation entre technique et réflexion critique. Il ne s’agit pas seulement de montrer que l’IA peut être utilisée pour aider à la mémorisation, mais de réfléchir aux conditions de cette aide. Une IA mal conçue ou mal utilisée peut renforcer la dépendance, réduire l’effort cognitif, ou déléguer de manière excessive des fonctions mentales essentielles (Talan, 2024 \cite{talan} ; CNIL, 2024 \cite{cnil}). À l’inverse, une IA bien pensée peut accompagner l’utilisateur dans une logique d’empowerment cognitif, en renforçant sa confiance, en respectant ses choix, et en s’adaptant à ses contraintes. C’est cette deuxième voie que j’ai souhaité explorer : celle d’une technologie utile, inclusive, et au service de l’autonomie.
 
-Mais un tel projet n’a de sens que s’il s’inscrit dans une réflexion plus large sur les contextes d’usage, les publics concernés et les effets sociétaux induits. C’est pourquoi, dans la quatrième partie, j’ai ouvert la réflexion aux applications concrètes possibles : en milieu scolaire, universitaire, thérapeutique ou auprès de publics neurodivergents. J’ai montré comment un tel outil pouvait répondre à des besoins réels, dans des contextes parfois fragiles, où l’autonomie cognitive et la continuité des apprentissages sont cruciales. J’ai également exposé les limites éthiques et techniques de ces dispositifs : dépendance, opacité des algorithmes, risque d’uniformisation des profils, enjeux de protection des données. L’intelligence artificielle, en touchant à la mémoire, touche aussi à ce qu’il y a de plus intime et de plus humain. Elle doit donc être maniée avec prudence, humilité et responsabilité.
+Ce travail ouvre de nombreuses perspectives. Sur le plan technique, le système pourrait être enrichi par l’ajout de modèles plus puissants comme les Transformers ou les modèles multitâches. Il serait également pertinent d’intégrer des modalités multimodales (audio, image, geste) pour s’adapter à différents styles d’apprentissage. Sur le plan expérimental, il faudrait envisager des tests auprès de publics réels, en contexte scolaire, universitaire ou clinique, afin d’évaluer l’impact réel de l’outil sur la consolidation mnésique. Sur le plan éthique, il conviendrait de développer un cadre de gouvernance garantissant la transparence des algorithmes, la protection des données personnelles, et le droit à la déconnexion.
 
-Ce mémoire ne prétend pas apporter une solution définitive à ces enjeux. Il vise plutôt à ouvrir un champ d’exploration : celui d’une intelligence artificielle éducative, éthique, et centrée sur l’humain. Je crois que la technologie, lorsqu’elle est conçue dans le respect des singularités cognitives, peut devenir un outil d’émancipation plutôt qu’un facteur d’aliénation. Le système que j’ai esquissé n’est qu’une première étape, un point de départ vers d’autres travaux possibles : la mise en œuvre d’un prototype complet, des tests empiriques auprès d’utilisateurs, l’intégration de modalités sensorielles élargies (voix, image, gestes), ou encore l’exploration de modèles plus récents comme les architectures Transformer.
-
-À l’issue de ce travail, je retire une conviction profonde : la mémoire, si elle est soutenue intelligemment, reste un espace de liberté, de création et de lien avec soi. L’intelligence artificielle, loin de nous priver de cette capacité, peut nous aider à mieux la cultiver, à mieux la connaître, à mieux l’accompagner.
+En définitive, je retiens de ce mémoire une conviction renforcée : la mémoire humaine ne peut pas être "augmentée" sans être d’abord comprise, respectée et accompagnée. L’intelligence artificielle peut jouer un rôle précieux dans ce processus, à condition de ne pas effacer ce qu’elle prétend aider. Ce travail représente pour moi une première contribution à un domaine en pleine évolution, à la frontière de la cognition, de la pédagogie et de la technologie. Il marque aussi un engagement personnel pour une IA plus humaine, plus responsable, et plus proche des besoins réels des individus.
 
 % Postface
 \chapter*{Postface}
@@ -1031,16 +1074,51 @@ Je remercie celles et ceux qui, de près ou de loin, ont nourri ce travail : mes
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{images/1.1.1_2.png}
-    \caption{schéma du modèle de la mémoire de travail de Baddeley et Hitch}
-    \label{fig:beth}
+    \includegraphics[width=0.7\textwidth]{images/1.1.1_3.jpeg}
+    \caption{Carte mentale des différentes méthodes pour améliorer la mémoire}
+    \label{fig:1.1.1_3}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{images/1.1.2.png}
-    \caption{Les différents types de mémoire à long terme}
-    \label{fig:1.1.2}
+    \includegraphics[width=0.7\textwidth]{images/1.2.1_2.png}
+    \caption{Effets du vieillissement cognitif sur les différentes formes de mémoire}
+    \label{fig:1.2.1_2}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/1.2.3.png}
+    \caption{La courbe de l'oubli d'Ebbinghaus et l'effet des rappels sur la mémoire}
+    \label{fig:1.2.3_2}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/1.3.1_2.png}
+    \caption{Méthodes éprouvées pour améliorer la mémorisation}
+    \label{fig:1.3.1_2}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/1.3.2_2.png}
+    \caption{Tableau comparatif d'outils de mémorisation}
+    \label{fig:1.3.2_2}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/2.1.1_2.png}
+    \caption{Schéma de fonctionnement d'une IA}
+    \label{fig:2.1.1_2}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/2.1.1_2.png}
+    \caption{Schéma de fonctionnement d'une IA}
+    \label{fig:2.1.1_2}
 \end{figure}
 
 \end{document}
